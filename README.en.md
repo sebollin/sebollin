@@ -85,11 +85,11 @@ Both are also on **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**
 
 ---
 
-## 🏗️ What I build
+## 🏗️ What I have built
 
 - 📊 **UdelaR procurement monitor** *(SeCIU)* — around **100,000 purchases** in a [Shiny](https://shiny.posit.co/) dashboard with several visualisations and cross-filters, hand-written CSS included.
 - 🏛️ **[tus-ipm-microsimulacion](https://github.com/sebollin/tus-ipm-microsimulacion)** — microsimulation of how increases in Uruguay's *Tarjeta Uruguay Social* affect **multidimensional poverty** (ECH 2025): aggregate results, reproducible figures, and the methodological architecture.
-- 🧰 **[lupa](https://github.com/sebollin/lupa)** and **[bigbang](https://github.com/sebollin/bigbang)** — the two tools above, written because I needed them and they did not exist.
+- 🧰 **[lupa](https://github.com/sebollin/lupa)** and **[bigbang](https://github.com/sebollin/bigbang)** — the two tools above; I wrote them because I needed them and they did not exist.
 - 🗺️ **CARTOGRAFÍA URGENTE** — survey and analysis of the geographic distribution of educational provision for children and adolescents in Montevideo.
 
 And after hours: optimisation and forecasting models for problems nobody cares
@@ -112,17 +112,19 @@ and [a regex anchor that swallows the trailing newline in the CESU-8 codec](http
 
 <div align="center">
 
-**Languages and platform**
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=r,py,postgres,git,github,gitlab,docker,linux,vscode,wordpress&theme=dark" />
-  <img src="https://skillicons.dev/icons?i=r,py,postgres,git,github,gitlab,docker,linux,vscode,wordpress&theme=light" alt="R, Python, PostgreSQL, Git, GitHub, GitLab, Docker, Linux, VS Code and WordPress" />
-</picture>
+**Languages**
 
 <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" />
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge" />
 <img src="https://img.shields.io/badge/GNU%20Octave-0790C0?style=for-the-badge&logo=octave&logoColor=white" />
+
+**Platform and tooling**
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres,git,github,gitlab,docker,linux,vscode,wordpress&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=postgres,git,github,gitlab,docker,linux,vscode,wordpress&theme=light" alt="PostgreSQL, Git, GitHub, GitLab, Docker, Linux, VS Code and WordPress" />
+</picture>
 
 **Data, models and visualisation**
 
