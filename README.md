@@ -123,9 +123,11 @@ y [un ancla de expresión regular que se come el salto de línea final en el cod
 **Plataforma y herramientas**
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres,sqlite,jupyter,git,github,gitlab,docker,linux,vscode,wordpress&theme=dark" />
-  <img src="https://skillicons.dev/icons?i=postgres,sqlite,jupyter,git,github,gitlab,docker,linux,vscode,wordpress&theme=light" alt="PostgreSQL, SQLite, Jupyter, Git, GitHub, GitLab, Docker, Linux, VS Code y WordPress" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres,sqlite,jupyter,latex,bash,git,github,gitlab,docker,linux,vscode,wordpress&perline=12&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=postgres,sqlite,jupyter,latex,bash,git,github,gitlab,docker,linux,vscode,wordpress&perline=12&theme=light" alt="PostgreSQL, SQLite, Jupyter, LaTeX, Bash, Git, GitHub, GitLab, Docker, Linux, VS Code y WordPress" />
 </picture>
+
+<br>
 
 <img src="https://img.shields.io/badge/Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=white" />
 <img src="https://img.shields.io/badge/DBeaver-382923?style=flat-square&logo=dbeaver&logoColor=white" />
