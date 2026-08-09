@@ -122,9 +122,12 @@ and [a regex anchor that swallows the trailing newline in the CESU-8 codec](http
 **Platform and tooling**
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres,git,github,gitlab,docker,linux,vscode,wordpress&theme=dark" />
-  <img src="https://skillicons.dev/icons?i=postgres,git,github,gitlab,docker,linux,vscode,wordpress&theme=light" alt="PostgreSQL, Git, GitHub, GitLab, Docker, Linux, VS Code and WordPress" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres,sqlite,jupyter,git,github,gitlab,docker,linux,vscode,wordpress&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=postgres,sqlite,jupyter,git,github,gitlab,docker,linux,vscode,wordpress&theme=light" alt="PostgreSQL, SQLite, Jupyter, Git, GitHub, GitLab, Docker, Linux, VS Code and WordPress" />
 </picture>
+
+<img src="https://img.shields.io/badge/Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=white" />
+<img src="https://img.shields.io/badge/DBeaver-382923?style=flat-square&logo=dbeaver&logoColor=white" />
 
 **Data, models and visualisation**
 
