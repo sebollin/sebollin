@@ -38,7 +38,7 @@ antes que una respuesta cómoda.
 
 > **In short** — Data scientist and educator from Uruguay, 17 years in.
 > I build auditable R tooling for public-policy data: profiling, data quality,
-> record linkage. `bigbang` is on CRAN, `lupa` on GitHub and r-universe, plus
+> record linkage. `bigbang` is on CRAN and r-universe, `lupa` on GitHub, plus
 > upstream contributions to `ftfy`. → **[English version](README.en.md)**
 
 ---
@@ -80,7 +80,7 @@ pak::pak("sebollin/lupa")
 </tr>
 </table>
 
-Los dos están también en **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
+`bigbang` está además en **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
 
 <sub>Los hexágonos de los dos son míos, de la idea al SVG.</sub>
 

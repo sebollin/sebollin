@@ -79,7 +79,7 @@ pak::pak("sebollin/lupa")
 </tr>
 </table>
 
-Both are also on **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
+`bigbang` is also on **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
 
 <sub>Both hex stickers are mine, from the idea to the SVG.</sub>
 
