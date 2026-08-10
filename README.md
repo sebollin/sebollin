@@ -26,7 +26,7 @@ las transferencias que decide el Estado, los de las compras de una universidad,
 y los de cualquier problema que se deje modelar—. La pregunta es siempre la
 misma: qué dice este dato, y qué no puede decir.
 
-- 🏛️ **Analista de datos** en la **Dirección Nacional de Transferencias y Análisis de Datos ([DINTAD](https://www.gub.uy/ministerio-desarrollo-social/))** del **MIDES**, como consultor del **[UNFPA](https://uruguay.unfpa.org/)**: gestión y análisis de los programas de transferencias monetarias a hogares en situación de vulnerabilidad socioeconómica.
+- 🏛️ **Analista de datos** en la **Dirección Nacional de Transferencias y Análisis de Datos ([DINTAD](https://www.gub.uy/ministerio-desarrollo-social/))** del **MIDES**, como consultor de **[UNFPA](https://uruguay.unfpa.org/)**: gestión y análisis de los programas de transferencias monetarias a hogares en situación de vulnerabilidad socioeconómica.
 - 🎓 **Analista de datos** en el **[SeCIU](https://www.seciu.edu.uy/)** de la Universidad de la República: monitores y visualizadores institucionales en **R** y **Shiny**.
 - 📚 **Coordinador de talleres extracurriculares** en un liceo público, desde 2016; son 13 años en educación secundaria antes de esto. No lo dejé cuando cambié de rubro y no pienso dejarlo.
 - 🔬 Cursando la **Maestría en Ciencia de Datos** (CPAP–FIng, UdelaR).
