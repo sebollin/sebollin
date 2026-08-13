@@ -15,10 +15,19 @@ textPath sobre un path corto simplemente no dibuja los glifos que no entran,
 y el mismo guion de fotogramas sirve igual. Sin animacion se ve la primera
 frase entera, porque el path de la capa 0 arranca con su largo completo.
 """
+import base64
+import pathlib
 import sys
 
 FS = 22                 # tamaño de fuente
-ADV = FS * 0.6021       # avance real del monospace, medido en Chromium
+ADV = FS * 0.6021       # avance de DejaVu Sans Mono (0.6021 em): la fuente va
+                        # embebida como subset woff2 de 2 KB, asi todos los
+                        # renderers usan la MISMA regla que estos calculos. El
+                        # que no soporte @font-face cae a la pila del sistema.
+_AQUI = pathlib.Path(__file__).resolve().parent
+_FUENTE_B64 = base64.b64encode(
+    (_AQUI / "_mono_subset.woff2").read_bytes()
+).decode("ascii")
 X0 = 22                 # margen izquierdo
 BASE = 34               # linea de base
 
@@ -135,7 +144,7 @@ def svg(guion_frases, salida):
         partes.append(
             f'  <text fill="{COL_NUEVO}" textLength="{lleno:.1f}" '
             f'lengthAdjust="spacingAndGlyphs"\n'
-            f'    font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"\n'
+            f'    font-family="TypingMono,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"\n'
             f'    font-size="{FS}" font-weight="600"><textPath xlink:href="#p{i}">'
             + (f'<tspan fill="{COL_FIJO}" font-weight="500">{frase[:fijo]}</tspan>'
                if fijo else "")
@@ -148,6 +157,7 @@ def svg(guion_frases, salida):
   xmlns:xlink="http://www.w3.org/1999/xlink" width="{ancho}" height="52"
   viewBox="0 0 {ancho} 52" role="img" aria-label="{' · '.join(frases)}">
   <title>{' · '.join(frases)}</title>
+  <style>@font-face{{font-family:'TypingMono';src:url(data:font/woff2;base64,{_FUENTE_B64}) format('woff2')}}</style>
 {cuerpo}
   <rect y="{BASE - FS + 3}" width="2.5" height="{FS + 2}" fill="{COL_CARET}"
     x="{X0 + len(frases[0]) * ADV:.1f}">
