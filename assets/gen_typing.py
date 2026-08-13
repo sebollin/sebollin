@@ -106,11 +106,14 @@ def svg(guion_frases, salida):
     partes = []
     for i, frase in enumerate(frases):
         comp = comprimir(capas[i])
-        # Cuando la frase esta completa el path puede sobrar: ya no queda
-        # glifo por filtrar y el margen absorbe monospaces mas anchos que el
-        # medido (la app movil, con su fuente ~2% mas ancha, recortaba la
-        # ultima letra de las frases largas). En los fotogramas de tecleo y
-        # borrado el ancho sigue exacto: ahi el path si decide que letra se ve.
+        # textLength encaja el texto en el ancho medido, asi el path, el caret
+        # y los glifos comparten la misma regla aunque la fuente del movil sea
+        # mas ancha que la medida en Chromium. La holgura de abajo queda de
+        # respaldo por si algun renderer ignora textLength: cuando la frase
+        # esta completa el path puede sobrar (no queda glifo por filtrar y el
+        # margen absorbe la diferencia; sin el, la app recortaba la ultima
+        # letra). En tecleo y borrado el ancho sigue exacto: ahi el path si
+        # decide que letra se ve.
         lleno = len(frase) * ADV
 
         def holgar(v, _lleno=lleno):
@@ -130,7 +133,8 @@ def svg(guion_frases, salida):
             f'      keyTimes="{";".join(f"{k:g}" for k, _ in comp)}" />'
             f'</path>')
         partes.append(
-            f'  <text fill="{COL_NUEVO}"\n'
+            f'  <text fill="{COL_NUEVO}" textLength="{lleno:.1f}" '
+            f'lengthAdjust="spacingAndGlyphs"\n'
             f'    font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"\n'
             f'    font-size="{FS}" font-weight="600"><textPath xlink:href="#p{i}">'
             + (f'<tspan fill="{COL_FIJO}" font-weight="500">{frase[:fijo]}</tspan>'
