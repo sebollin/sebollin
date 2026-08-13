@@ -106,6 +106,15 @@ def svg(guion_frases, salida):
     partes = []
     for i, frase in enumerate(frases):
         comp = comprimir(capas[i])
+        # Cuando la frase esta completa el path puede sobrar: ya no queda
+        # glifo por filtrar y el margen absorbe monospaces mas anchos que el
+        # medido (la app movil, con su fuente ~2% mas ancha, recortaba la
+        # ultima letra de las frases largas). En los fotogramas de tecleo y
+        # borrado el ancho sigue exacto: ahi el path si decide que letra se ve.
+        lleno = len(frase) * ADV
+
+        def holgar(v, _lleno=lleno):
+            return v + 2 * ADV if abs(v - _lleno) < 0.05 else v
         # Gris: el tronco que la frase comparte con su vecina mas parecida,
         # antes o despues. Verde: lo que se teclea o se va a reescribir. Mirar
         # solo hacia adelante dejaba el remate entero en verde y hacia atras
@@ -114,10 +123,10 @@ def svg(guion_frases, salida):
                    prefijo_comun(frase, frases[(i + 1) % n]))
         fijo = frase.rfind(" ", 0, fijo) + 1 if fijo < len(frase) else fijo
         partes.append(
-            f'  <path id="p{i}" d="m{X0},{BASE} h{respaldo(i):.1f}">\n'
+            f'  <path id="p{i}" d="m{X0},{BASE} h{holgar(respaldo(i)):.1f}">\n'
             f'    <animate attributeName="d" dur="{total}ms" '
             f'repeatCount="indefinite"\n'
-            f'      values="{";".join(f"m{X0},{BASE} h{v:.1f}" for _, v in comp)}"\n'
+            f'      values="{";".join(f"m{X0},{BASE} h{holgar(v):.1f}" for _, v in comp)}"\n'
             f'      keyTimes="{";".join(f"{k:g}" for k, _ in comp)}" />'
             f'</path>')
         partes.append(
