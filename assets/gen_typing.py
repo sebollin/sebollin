@@ -7,6 +7,13 @@ teclea el resto: lo que cambia puede estar en el medio de la frase.
 
 En gris queda lo que ya estaba y no cambio; en verde, lo que se acaba de
 escribir. Cada frase puede pedir ritmo "normal" o "rapido".
+
+La revelacion usa texto sobre un path cuya longitud se anima, no clip-path:
+la app movil de GitHub ejecuta las animaciones SMIL pero ignora los
+clip-path, asi que con recortes las ocho frases aparecian superpuestas. Un
+textPath sobre un path corto simplemente no dibuja los glifos que no entran,
+y el mismo guion de fotogramas sirve igual. Sin animacion se ve la primera
+frase entera, porque el path de la capa 0 arranca con su largo completo.
 """
 import sys
 
@@ -107,25 +114,25 @@ def svg(guion_frases, salida):
                    prefijo_comun(frase, frases[(i + 1) % n]))
         fijo = frase.rfind(" ", 0, fijo) + 1 if fijo < len(frase) else fijo
         partes.append(
-            f'  <clipPath id="c{i}"><rect x="{X0}" y="0" height="60" '
-            f'width="{respaldo(i):.1f}">\n'
-            f'    <animate attributeName="width" dur="{total}ms" '
+            f'  <path id="p{i}" d="m{X0},{BASE} h{respaldo(i):.1f}">\n'
+            f'    <animate attributeName="d" dur="{total}ms" '
             f'repeatCount="indefinite"\n'
-            f'      values="{";".join(f"{v:.1f}" for _, v in comp)}"\n'
+            f'      values="{";".join(f"m{X0},{BASE} h{v:.1f}" for _, v in comp)}"\n'
             f'      keyTimes="{";".join(f"{k:g}" for k, _ in comp)}" />'
-            f'</rect></clipPath>')
+            f'</path>')
         partes.append(
-            f'  <text x="{X0}" y="{BASE}" clip-path="url(#c{i})" fill="{COL_NUEVO}"\n'
+            f'  <text fill="{COL_NUEVO}"\n'
             f'    font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"\n'
-            f'    font-size="{FS}" font-weight="600">'
+            f'    font-size="{FS}" font-weight="600"><textPath xlink:href="#p{i}">'
             + (f'<tspan fill="{COL_FIJO}" font-weight="500">{frase[:fijo]}</tspan>'
                if fijo else "")
-            + f'{frase[fijo:]}</text>')
+            + f'{frase[fijo:]}</textPath></text>')
 
     comp_caret = comprimir(caret)
     ancho = int(X0 * 2 + max(len(f) for f in frases) * ADV + 16)
     cuerpo = "\n".join(partes)
-    doc = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{ancho}" height="52"
+    doc = f'''<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" width="{ancho}" height="52"
   viewBox="0 0 {ancho} 52" role="img" aria-label="{' · '.join(frases)}">
   <title>{' · '.join(frases)}</title>
 {cuerpo}
