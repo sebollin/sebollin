@@ -14,6 +14,14 @@ clip-path, asi que con recortes las ocho frases aparecian superpuestas. Un
 textPath sobre un path corto simplemente no dibuja los glifos que no entran,
 y el mismo guion de fotogramas sirve igual. Sin animacion se ve la primera
 frase entera, porque el path de la capa 0 arranca con su largo completo.
+
+El caret es un glifo '|' DENTRO del texto, no un rect aparte: la fuente del
+movil es ~2% mas ancha que la medida aca, asi que cualquier posicion
+precalculada termina corta (el rect quedaba en medio de la ultima letra).
+Un glifo en el flujo lo posiciona el renderer con su propia regla y no puede
+desfasarse — es lo que hacen los perfiles con readme-typing-svg que se ven
+bien en la app. El precio: el caret se ve cuando la frase esta completa
+(el path no llega hasta el durante el tipeo), como en esos perfiles.
 """
 import base64
 import pathlib
@@ -90,13 +98,11 @@ def svg(guion_frases, salida):
         guion.append((t, actual[:k - 1], n - 1))
     total = t
 
-    # Cada frase se dibuja una vez y se revela con un rectangulo de recorte.
+    # Cada frase se dibuja una vez; su path revela el prefijo que toca.
     capas = [[] for _ in frases]
-    caret = []
     for ts, texto, dueña in guion:
         k = round(ts / total, 6)
         w = len(texto) * ADV
-        caret.append((k, X0 + w))
         for j in range(n):
             capas[j].append((k, w if j == dueña else 0.0))
 
@@ -115,18 +121,16 @@ def svg(guion_frases, salida):
     partes = []
     for i, frase in enumerate(frases):
         comp = comprimir(capas[i])
-        # textLength encaja el texto en el ancho medido, asi el path, el caret
-        # y los glifos comparten la misma regla aunque la fuente del movil sea
-        # mas ancha que la medida en Chromium. La holgura de abajo queda de
-        # respaldo por si algun renderer ignora textLength: cuando la frase
-        # esta completa el path puede sobrar (no queda glifo por filtrar y el
-        # margen absorbe la diferencia; sin el, la app recortaba la ultima
-        # letra). En tecleo y borrado el ancho sigue exacto: ahi el path si
-        # decide que letra se ve.
+        # En los fotogramas de frase completa el path sobra a proposito
+        # (+3 avances): cubre el caret '|' agregado al final del texto y la
+        # fuente ~2% mas ancha del movil. Sin holgura la app recortaba la
+        # ultima letra; con frase a medias el largo sigue exacto porque ahi
+        # el path si decide que letra se ve (y el caret, que es el ULTIMO
+        # glifo de la cadena, queda fuera del path hasta completarla).
         lleno = len(frase) * ADV
 
         def holgar(v, _lleno=lleno):
-            return v + 2 * ADV if abs(v - _lleno) < 0.05 else v
+            return v + 3 * ADV if abs(v - _lleno) < 0.05 else v
         # Gris: el tronco que la frase comparte con su vecina mas parecida,
         # antes o despues. Verde: lo que se teclea o se va a reescribir. Mirar
         # solo hacia adelante dejaba el remate entero en verde y hacia atras
@@ -142,16 +146,20 @@ def svg(guion_frases, salida):
             f'      keyTimes="{";".join(f"{k:g}" for k, _ in comp)}" />'
             f'</path>')
         partes.append(
-            f'  <text fill="{COL_NUEVO}" textLength="{lleno:.1f}" '
+            f'  <text fill="{COL_NUEVO}" textLength="{lleno + ADV:.1f}" '
             f'lengthAdjust="spacingAndGlyphs"\n'
             f'    font-family="TypingMono,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"\n'
             f'    font-size="{FS}" font-weight="600"><textPath xlink:href="#p{i}">'
             + (f'<tspan fill="{COL_FIJO}" font-weight="500">{frase[:fijo]}</tspan>'
                if fijo else "")
-            + f'{frase[fijo:]}</textPath></text>')
+            + f'{frase[fijo:]}'
+            + f'<tspan fill="{COL_CARET}">|'
+            + '<animate attributeName="opacity" dur="1s" '
+            + 'repeatCount="indefinite" values="1;1;0;0;1" '
+            + 'keyTimes="0;0.45;0.5;0.95;1"/></tspan>'
+            + '</textPath></text>')
 
-    comp_caret = comprimir(caret)
-    ancho = int(X0 * 2 + max(len(f) for f in frases) * ADV + 16)
+    ancho = int(X0 * 2 + (max(len(f) for f in frases) + 1) * ADV + 16)
     cuerpo = "\n".join(partes)
     doc = f'''<svg xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink" width="{ancho}" height="52"
@@ -159,14 +167,6 @@ def svg(guion_frases, salida):
   <title>{' · '.join(frases)}</title>
   <style>@font-face{{font-family:'TypingMono';src:url(data:font/woff2;base64,{_FUENTE_B64}) format('woff2')}}</style>
 {cuerpo}
-  <rect y="{BASE - FS + 3}" width="2.5" height="{FS + 2}" fill="{COL_CARET}"
-    x="{X0 + len(frases[0]) * ADV:.1f}">
-    <animate attributeName="x" dur="{total}ms" repeatCount="indefinite"
-      values="{";".join(f"{v:.1f}" for _, v in comp_caret)}"
-      keyTimes="{";".join(f"{k:g}" for k, _ in comp_caret)}" />
-    <animate attributeName="opacity" dur="1s" repeatCount="indefinite"
-      values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" />
-  </rect>
 </svg>
 '''
     open(salida, "w").write(doc)
