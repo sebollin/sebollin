@@ -97,10 +97,24 @@ about except me. Still private.
 
 ---
 
-## 🤝 Contributions to `ftfy`
+## 🤝 Contributions to other projects
 
-Three fixes proposed to [`ftfy`](https://github.com/rspeer/python-ftfy), the
-reference library for repairing mojibake, by
+### 🗺️ [geouy](https://github.com/Richard-Detomasi/geouy) — geographic data for Uruguay
+
+Collaborator on [Richard Detomasi](https://github.com/Richard-Detomasi)'s
+package, with whom I presented {DADverse} at LatinR 2023. It spent five years on
+CRAN and was archived in 2025; the work is bringing it back: finding out what
+broke, fixing it, and getting it ready to return.
+
+So far: the orthophoto function works again —it used to abort on every call
+because of a check that never detected what it claimed to, and returned the
+whole tile instead of the requested area— and a `download.file()` in append mode
+that crashed the entire R session with a segfault is gone. `R CMD check` went
+from one error to none.
+
+### 🔤 [ftfy](https://github.com/rspeer/python-ftfy) — mojibake repair
+
+Three fixes proposed to the reference library for repairing mojibake, by
 [Robyn Speer](https://github.com/rspeer):
 [detecting and fixing KOI8-R](https://github.com/rspeer/python-ftfy/pull/234),
 [Windows-1252 mojibake of U+2000 block symbols](https://github.com/rspeer/python-ftfy/pull/235),

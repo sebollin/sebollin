@@ -39,7 +39,8 @@ antes que una respuesta cómoda.
 > **In short** — Data scientist and educator from Uruguay, 17 years in.
 > I build auditable R tooling for public-policy data: profiling, data quality,
 > record linkage. `bigbang` is on CRAN and r-universe, `lupa` on GitHub, plus
-> upstream contributions to `ftfy`. → **[English version](README.en.md)**
+> contributions to `ftfy` and to `geouy`, an archived CRAN package I'm helping
+> bring back. → **[English version](README.en.md)**
 
 ---
 
@@ -98,10 +99,24 @@ le importan a nadie más que a mí. Todavía privados.
 
 ---
 
-## 🤝 Aportes a `ftfy`
+## 🤝 Aportes a otros proyectos
 
-Tres arreglos propuestos a [`ftfy`](https://github.com/rspeer/python-ftfy), la
-biblioteca de referencia para reparar mojibake, de
+### 🗺️ [geouy](https://github.com/Richard-Detomasi/geouy) — información geográfica de Uruguay
+
+Colaborador del paquete de [Richard Detomasi](https://github.com/Richard-Detomasi),
+con quien ya habíamos presentado {DADverse} en LatinR 2023. El paquete estuvo
+cinco años en CRAN y fue archivado en 2025; el trabajo es devolverlo a la vida:
+encontrar por qué se rompió, arreglarlo y dejarlo en condiciones de volver.
+
+Hasta ahora: la función de ortofotos volvió a funcionar —abortaba siempre por
+una validación que además nunca detectaba lo que decía detectar, y devolvía la
+imagen entera en lugar del área pedida—, y un `download.file()` en modo *append*
+que tumbaba la sesión de R entera con un segfault dejó de estar. El
+`R CMD check` pasó de un error a ninguno.
+
+### 🔤 [ftfy](https://github.com/rspeer/python-ftfy) — reparación de mojibake
+
+Tres arreglos propuestos a la biblioteca de referencia para reparar mojibake, de
 [Robyn Speer](https://github.com/rspeer):
 [detección y reparación de KOI8-R](https://github.com/rspeer/python-ftfy/pull/234),
 [mojibake de Windows-1252 en los símbolos del bloque U+2000](https://github.com/rspeer/python-ftfy/pull/235)
