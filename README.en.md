@@ -102,15 +102,9 @@ about except me. Still private.
 ### 🗺️ [geouy](https://github.com/Richard-Detomasi/geouy) — geographic data for Uruguay
 
 Collaborator on [Richard Detomasi](https://github.com/Richard-Detomasi)'s
-package, with whom I presented {DADverse} at LatinR 2023. It spent five years on
-CRAN and was archived in 2025; the work is bringing it back: finding out what
-broke, fixing it, and getting it ready to return.
-
-So far: the orthophoto function works again —it used to abort on every call
-because of a check that never detected what it claimed to, and returned the
-whole tile instead of the requested area— and a `download.file()` in append mode
-that crashed the entire R session with a segfault is gone. `R CMD check` went
-from one error to none.
+package, which spent five years on CRAN until it was archived in 2025. The work
+is bringing it back: finding out what broke, fixing it, and getting it ready to
+return.
 
 ### 🔤 [ftfy](https://github.com/rspeer/python-ftfy) — mojibake repair
 

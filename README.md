@@ -104,15 +104,9 @@ le importan a nadie más que a mí. Todavía privados.
 ### 🗺️ [geouy](https://github.com/Richard-Detomasi/geouy) — información geográfica de Uruguay
 
 Colaborador del paquete de [Richard Detomasi](https://github.com/Richard-Detomasi),
-con quien ya habíamos presentado {DADverse} en LatinR 2023. El paquete estuvo
-cinco años en CRAN y fue archivado en 2025; el trabajo es devolverlo a la vida:
-encontrar por qué se rompió, arreglarlo y dejarlo en condiciones de volver.
-
-Hasta ahora: la función de ortofotos volvió a funcionar —abortaba siempre por
-una validación que además nunca detectaba lo que decía detectar, y devolvía la
-imagen entera en lugar del área pedida—, y un `download.file()` en modo *append*
-que tumbaba la sesión de R entera con un segfault dejó de estar. El
-`R CMD check` pasó de un error a ninguno.
+que estuvo cinco años en CRAN hasta que lo archivaron en 2025. El trabajo es
+devolverlo a la vida: encontrar qué se rompió, arreglarlo y dejarlo en
+condiciones de volver.
 
 ### 🔤 [ftfy](https://github.com/rspeer/python-ftfy) — reparación de mojibake
 
