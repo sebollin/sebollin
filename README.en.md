@@ -9,6 +9,7 @@
 [![Email](https://img.shields.io/badge/Email-sebalucas@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sebalucas@gmail.com)
 [![CRAN](https://img.shields.io/badge/CRAN-bigbang-198CE7?style=for-the-badge&logo=r&logoColor=white)](https://cran.r-project.org/package=bigbang)
 [![r-universe](https://img.shields.io/badge/r--universe-sebollin-0e7c7b?style=for-the-badge&logo=r&logoColor=white)](https://sebollin.r-universe.dev/)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0009--9068--0276-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0009-9068-0276)
 
 🇺🇾
 
@@ -59,6 +60,8 @@ install.packages("bigbang")
 ```
 
 [![CRAN](https://www.r-pkg.org/badges/version/bigbang)](https://cran.r-project.org/package=bigbang)
+[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/bigbang)](https://cran.r-project.org/package=bigbang)
+[![Docs](https://img.shields.io/badge/docs-sebollin.github.io%2Fbigbang-0e7c7b)](https://sebollin.github.io/bigbang/)
 
 </td>
 <td width="50%" valign="top">
@@ -70,16 +73,20 @@ Data profiling, quality measurement and duplicate search at scale, and
 and never changes your data silently.
 
 ```r
-pak::pak("sebollin/lupa")
+install.packages("lupa", repos = c("https://sebollin.r-universe.dev",
+                                   "https://cloud.r-project.org"))
 ```
 
+[![r-universe](https://sebollin.r-universe.dev/lupa/badges/version)](https://sebollin.r-universe.dev/lupa)
 [![Docs](https://img.shields.io/badge/docs-sebollin.github.io%2Flupa-0e7c7b)](https://sebollin.github.io/lupa/)
 
 </td>
 </tr>
 </table>
 
-`bigbang` is also on **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
+Both can also be installed from **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
+`bigbang` is listed in Estación R's [catalogue of Latin American R packages](https://github.com/Estacion-R/asombrosos-paquetes-r-latinoamerica),
+and its hex sticker is in the [hexSticker gallery](https://github.com/GuangchuangYu/hexSticker#stickers-for-software-packages).
 
 <sub>Both hex stickers are mine, from the idea to the SVG.</sub>
 
@@ -101,10 +108,10 @@ about except me. Still private.
 
 ### 🗺️ [geouy](https://github.com/Richard-Detomasi/geouy) — geographic data for Uruguay
 
-Collaborator on [Richard Detomasi](https://github.com/Richard-Detomasi)'s
+Co-author of [Richard Detomasi](https://github.com/Richard-Detomasi)'s
 package, which spent five years on CRAN until it was archived in 2025. The work
 is bringing it back: finding out what broke, fixing it, and getting it ready to
-return.
+return. More than thirty of my PRs have been merged so far.
 
 ### 🔤 [ftfy](https://github.com/rspeer/python-ftfy) — mojibake repair
 
@@ -188,9 +195,9 @@ and [a regex anchor that swallows the trailing newline in the CESU-8 codec](http
 
 ## ✍️ Publications, talks and awards
 
-- **{DADverse}. Simplifying data processing for public policy aimed at vulnerable populations** — Lucas, S.; Detomasi, R. *LatinR 2023*.
+- **[{DADverse}. Simplifying data processing for public policy aimed at vulnerable populations](https://github.com/LatinR/presentaciones-LatinR2023/blob/main/papers/slides/DADverse.pdf)** — Lucas, S.; Detomasi, R. *LatinR 2023*.
 - **La Siembra. El legado de Aulas Comunitarias: un aporte a la educación uruguaya** — co-author of ch. 1.3.2. OBSUR, 2020.
-- **El aula en movimiento: aportes metodológicos desde la Educación No Formal** — *Enfoques, Revista de Educación No Formal*, Ministry of Education and Culture, v. 5, 2014.
+- **[El aula en movimiento: aportes metodológicos desde la Educación No Formal](https://www.gub.uy/ministerio-educacion-cultura/sites/ministerio-educacion-cultura/files/documentos/publicaciones/Revista_Enfoques_5.pdf)** — Catalurda, R.; Lucas, S.; González, W. *Enfoques, Revista de Educación No Formal*, Ministry of Education and Culture, v. 5, 2014.
 - **Talleres en el liceo… ¿para qué?** — Lucas, S.; Verdún, N. Talk at the «Alicia Goyena» Chair (CES–ANEP), 2016.
 - 🏆 **«Todo Suma» project** — creator and project lead. Winner of the *Concurso sobre Proyectos de Convivencia de los Centros Educativos*, Pelota al Medio a la Esperanza programme.
 

@@ -9,6 +9,7 @@
 [![Correo](https://img.shields.io/badge/Correo-sebalucas@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sebalucas@gmail.com)
 [![CRAN](https://img.shields.io/badge/CRAN-bigbang-198CE7?style=for-the-badge&logo=r&logoColor=white)](https://cran.r-project.org/package=bigbang)
 [![r-universe](https://img.shields.io/badge/r--universe-sebollin-0e7c7b?style=for-the-badge&logo=r&logoColor=white)](https://sebollin.r-universe.dev/)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0009--9068--0276-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0009-9068-0276)
 
 🇺🇾
 
@@ -38,9 +39,9 @@ antes que una respuesta cómoda.
 
 > **In short** — Data scientist and educator from Uruguay, 17 years in.
 > I build auditable R tooling for public-policy data: profiling, data quality,
-> record linkage. `bigbang` is on CRAN and r-universe, `lupa` on GitHub, plus
-> contributions to `ftfy` and to `geouy`, an archived CRAN package I'm helping
-> bring back. → **[English version](README.en.md)**
+> record linkage. `bigbang` is on CRAN, `lupa` on r-universe, and I co-author
+> `geouy`, an archived CRAN package I'm helping bring back; plus fixes proposed
+> to `ftfy`. → **[English version](README.en.md)**
 
 ---
 
@@ -61,6 +62,8 @@ install.packages("bigbang")
 ```
 
 [![CRAN](https://www.r-pkg.org/badges/version/bigbang)](https://cran.r-project.org/package=bigbang)
+[![Descargas](https://cranlogs.r-pkg.org/badges/grand-total/bigbang)](https://cran.r-project.org/package=bigbang)
+[![Sitio](https://img.shields.io/badge/documentaci%C3%B3n-sebollin.github.io%2Fbigbang-0e7c7b)](https://sebollin.github.io/bigbang/)
 
 </td>
 <td width="50%" valign="top">
@@ -72,16 +75,20 @@ declara alcance, evidencia e incertidumbre de cada resultado. Nunca cambia el
 dato original en silencio.
 
 ```r
-pak::pak("sebollin/lupa")
+install.packages("lupa", repos = c("https://sebollin.r-universe.dev",
+                                   "https://cloud.r-project.org"))
 ```
 
+[![r-universe](https://sebollin.r-universe.dev/lupa/badges/version)](https://sebollin.r-universe.dev/lupa)
 [![Sitio](https://img.shields.io/badge/documentaci%C3%B3n-sebollin.github.io%2Flupa-0e7c7b)](https://sebollin.github.io/lupa/)
 
 </td>
 </tr>
 </table>
 
-`bigbang` está además en **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
+Los dos se instalan también desde **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
+`bigbang` figura en el [catálogo de paquetes de R latinoamericanos](https://github.com/Estacion-R/asombrosos-paquetes-r-latinoamerica)
+de Estación R, y su hexágono, en la [galería de hexSticker](https://github.com/GuangchuangYu/hexSticker#stickers-for-software-packages).
 
 <sub>Los hexágonos de los dos son míos, de la idea al SVG.</sub>
 
@@ -103,10 +110,10 @@ le importan a nadie más que a mí. Todavía privados.
 
 ### 🗺️ [geouy](https://github.com/Richard-Detomasi/geouy) — información geográfica de Uruguay
 
-Colaborador del paquete de [Richard Detomasi](https://github.com/Richard-Detomasi),
+Coautor del paquete de [Richard Detomasi](https://github.com/Richard-Detomasi),
 que estuvo cinco años en CRAN hasta que lo archivaron en 2025. El trabajo es
 devolverlo a la vida: encontrar qué se rompió, arreglarlo y dejarlo en
-condiciones de volver.
+condiciones de volver. Llevo más de treinta PR integrados.
 
 ### 🔤 [ftfy](https://github.com/rspeer/python-ftfy) — reparación de mojibake
 
@@ -190,9 +197,9 @@ y [un ancla de expresión regular que se come el salto de línea final en el cod
 
 ## ✍️ Publicaciones, ponencias y reconocimientos
 
-- **{DADverse}. Simplificando el procesamiento de datos para políticas públicas enfocadas en población vulnerable** — Lucas, S.; Detomasi, R. *LatinR 2023*.
+- **[{DADverse}. Simplificando el procesamiento de datos para políticas públicas enfocadas en población vulnerable](https://github.com/LatinR/presentaciones-LatinR2023/blob/main/papers/slides/DADverse.pdf)** — Lucas, S.; Detomasi, R. *LatinR 2023*.
 - **La Siembra. El legado de Aulas Comunitarias: un aporte a la educación uruguaya** — coautor del cap. 1.3.2. OBSUR, 2020.
-- **El aula en movimiento: aportes metodológicos desde la Educación No Formal** — *Enfoques, Revista de Educación No Formal*, MEC, v. 5, 2014.
+- **[El aula en movimiento: aportes metodológicos desde la Educación No Formal](https://www.gub.uy/ministerio-educacion-cultura/sites/ministerio-educacion-cultura/files/documentos/publicaciones/Revista_Enfoques_5.pdf)** — Catalurda, R.; Lucas, S.; González, W. *Enfoques, Revista de Educación No Formal*, MEC, v. 5, 2014.
 - **Talleres en el liceo… ¿para qué?** — Lucas, S.; Verdún, N. Ponencia en la Cátedra «Alicia Goyena» (CES–ANEP), 2016.
 - 🏆 **Proyecto «Todo Suma»** — creador e impulsor. Ganador del *Concurso sobre Proyectos de Convivencia de los Centros Educativos*, Programa Pelota al Medio a la Esperanza.
 
