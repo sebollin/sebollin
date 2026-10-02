@@ -75,8 +75,9 @@ declara alcance, evidencia e incertidumbre de cada resultado. Nunca cambia el
 dato original en silencio.
 
 ```r
-install.packages("lupa", repos = c("https://sebollin.r-universe.dev",
-                                   "https://cloud.r-project.org"))
+install.packages("lupa", repos = c(
+  "https://sebollin.r-universe.dev",
+  "https://cloud.r-project.org"))
 ```
 
 [![r-universe](https://sebollin.r-universe.dev/lupa/badges/version)](https://sebollin.r-universe.dev/lupa)
@@ -84,13 +85,31 @@ install.packages("lupa", repos = c("https://sebollin.r-universe.dev",
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top">
+
+### 🗺️ [geouy](https://github.com/Richard-Detomasi/geouy) · coautor
+
+Datos geográficos oficiales de Uruguay —capas del INE, la IDE, el MIDES, el MTOP
+y Ambiente, entre otras— listos para usar en R como objetos `sf`. Lo creó y lo
+mantiene [Richard Detomasi](https://github.com/Richard-Detomasi). Estuvo cinco
+años en CRAN hasta que lo archivaron en 2025, y el trabajo es devolverlo a la
+vida: encontrar qué se rompió, arreglarlo y dejarlo en condiciones de volver.
+Llevo más de treinta PR integrados.
+
+```r
+pak::pak("Richard-Detomasi/geouy")
+```
+
+</td>
+</tr>
 </table>
 
-Los dos se instalan también desde **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
+`bigbang` y `lupa` se instalan también desde **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
 `bigbang` figura en el [catálogo de paquetes de R latinoamericanos](https://github.com/Estacion-R/asombrosos-paquetes-r-latinoamerica)
 de Estación R, y su hexágono, en la [galería de hexSticker](https://github.com/GuangchuangYu/hexSticker#stickers-for-software-packages).
 
-<sub>Los hexágonos de los dos son míos, de la idea al SVG.</sub>
+<sub>Los hexágonos de `bigbang` y `lupa` son míos, de la idea al SVG.</sub>
 
 ---
 
@@ -107,13 +126,6 @@ le importan a nadie más que a mí. Todavía privados.
 ---
 
 ## 🤝 Aportes a otros proyectos
-
-### 🗺️ [geouy](https://github.com/Richard-Detomasi/geouy) — información geográfica de Uruguay
-
-Coautor del paquete de [Richard Detomasi](https://github.com/Richard-Detomasi),
-que estuvo cinco años en CRAN hasta que lo archivaron en 2025. El trabajo es
-devolverlo a la vida: encontrar qué se rompió, arreglarlo y dejarlo en
-condiciones de volver. Llevo más de treinta PR integrados.
 
 ### 🔤 [ftfy](https://github.com/rspeer/python-ftfy) — reparación de mojibake
 
@@ -197,7 +209,7 @@ y [un ancla de expresión regular que se come el salto de línea final en el cod
 
 ## ✍️ Publicaciones, ponencias y reconocimientos
 
-- **[{DADverse}. Simplificando el procesamiento de datos para políticas públicas enfocadas en población vulnerable](https://github.com/LatinR/presentaciones-LatinR2023/blob/main/papers/slides/DADverse.pdf)** — Lucas, S.; Detomasi, R. *LatinR 2023*.
+- **[{DADverse}. Simplificando el procesamiento de datos para políticas públicas enfocadas en población vulnerable en ambientes de uso restringido](https://github.com/LatinR/presentaciones-LatinR2023/blob/main/papers/slides/DADverse.pdf)** — Lucas, S.; Detomasi, R. *LatinR 2023*.
 - **La Siembra. El legado de Aulas Comunitarias: un aporte a la educación uruguaya** — coautor del cap. 1.3.2. OBSUR, 2020.
 - **[El aula en movimiento: aportes metodológicos desde la Educación No Formal](https://www.gub.uy/ministerio-educacion-cultura/sites/ministerio-educacion-cultura/files/documentos/publicaciones/Revista_Enfoques_5.pdf)** — Catalurda, R.; Lucas, S.; González, W. *Enfoques, Revista de Educación No Formal*, MEC, v. 5, 2014.
 - **Talleres en el liceo… ¿para qué?** — Lucas, S.; Verdún, N. Ponencia en la Cátedra «Alicia Goyena» (CES–ANEP), 2016.
