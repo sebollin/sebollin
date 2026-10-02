@@ -95,7 +95,6 @@ y Ambiente, entre otras— listos para usar en R como objetos `sf`. Lo creó y l
 mantiene [Richard Detomasi](https://github.com/Richard-Detomasi). Estuvo cinco
 años en CRAN hasta que lo archivaron en 2025, y el trabajo es devolverlo a la
 vida: encontrar qué se rompió, arreglarlo y dejarlo en condiciones de volver.
-Llevo más de treinta PR integrados.
 
 ```r
 pak::pak("Richard-Detomasi/geouy")

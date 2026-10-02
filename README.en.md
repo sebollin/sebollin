@@ -93,7 +93,6 @@ the environment ministry, among others— ready to use in R as `sf` objects.
 Created and maintained by [Richard Detomasi](https://github.com/Richard-Detomasi).
 It spent five years on CRAN until it was archived in 2025; the work is bringing
 it back: finding out what broke, fixing it, and getting it ready to return.
-More than thirty of my PRs have been merged so far.
 
 ```r
 pak::pak("Richard-Detomasi/geouy")
