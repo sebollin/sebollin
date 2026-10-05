@@ -1,0 +1,55 @@
+# Genera las dos tarjetas de lenguajes de la sección «GitHub» del perfil y las
+# guarda en assets/tarjetas/. Así el README no depende del servicio público de
+# github-profile-summary-cards, que corta con «Cards are temporarily rate
+# limited» cuando lo usan demasiados perfiles a la vez.
+#
+# Con el GITHUB_TOKEN del workflow sólo se ven los repositorios públicos. Si la
+# tarjeta de commits sale vacía, crear un token fino de sólo lectura pública y
+# guardarlo como secreto SUMMARY_GITHUB_TOKEN: se usa en lugar del otro.
+
+name: tarjetas
+
+on:
+  schedule:
+    - cron: "17 6 * * 1" # los lunes
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tarjetas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          UTC_OFFSET: -3
+          AUTO_PUSH: false
+
+      - name: Quedarse con las dos tarjetas, en tema claro y oscuro
+        run: |
+          mkdir -p assets/tarjetas
+          for tema in github github_dark; do
+            for tarjeta in 1-repos-per-language 2-most-commit-language; do
+              cp "profile-summary-card-output/$tema/$tarjeta.svg" \
+                 "assets/tarjetas/$tarjeta.$tema.svg"
+            done
+          done
+          sudo rm -rf profile-summary-card-output
+
+      - name: Commitear sólo si cambiaron
+        run: |
+          git add assets/tarjetas
+          if git diff --cached --quiet; then
+            echo "Las tarjetas no cambiaron."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Actualiza las tarjetas de lenguajes"
+          git push
