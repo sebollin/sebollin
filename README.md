@@ -63,6 +63,7 @@ install.packages("bigbang")
 
 [![CRAN](https://www.r-pkg.org/badges/version/bigbang)](https://cran.r-project.org/package=bigbang)
 [![Descargas](https://cranlogs.r-pkg.org/badges/grand-total/bigbang)](https://cran.r-project.org/package=bigbang)
+[![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/bigbang/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/bigbang/actions/workflows/R-CMD-check.yaml)
 [![Sitio](https://img.shields.io/badge/documentaci%C3%B3n-sebollin.github.io%2Fbigbang-0e7c7b)](https://sebollin.github.io/bigbang/)
 
 </td>
@@ -81,6 +82,7 @@ install.packages("lupa", repos = c(
 ```
 
 [![r-universe](https://sebollin.r-universe.dev/lupa/badges/version)](https://sebollin.r-universe.dev/lupa)
+[![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/lupa/actions/workflows/R-CMD-check.yaml)
 [![Sitio](https://img.shields.io/badge/documentaci%C3%B3n-sebollin.github.io%2Flupa-0e7c7b)](https://sebollin.github.io/lupa/)
 
 </td>
@@ -100,6 +102,10 @@ vida: encontrar qué se rompió, arreglarlo y dejarlo en condiciones de volver.
 pak::pak("Richard-Detomasi/geouy")
 ```
 
+[![CRAN](https://img.shields.io/badge/CRAN-archivado%20en%202025-lightgrey)](https://cran.r-project.org/package=geouy)
+[![Descargas](https://cranlogs.r-pkg.org/badges/grand-total/geouy)](https://cran.r-project.org/package=geouy)
+[![R CMD check](https://img.shields.io/github/actions/workflow/status/Richard-Detomasi/geouy/R-CMD-check.yaml?branch=master&label=R%20CMD%20check)](https://github.com/Richard-Detomasi/geouy/actions/workflows/R-CMD-check.yaml)
+
 </td>
 </tr>
 </table>
@@ -107,8 +113,6 @@ pak::pak("Richard-Detomasi/geouy")
 `bigbang` y `lupa` se instalan también desde **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
 `bigbang` figura en el [catálogo de paquetes de R latinoamericanos](https://github.com/Estacion-R/asombrosos-paquetes-r-latinoamerica)
 de Estación R, y su hexágono, en la [galería de hexSticker](https://github.com/GuangchuangYu/hexSticker#stickers-for-software-packages).
-
-<sub>Los hexágonos de `bigbang` y `lupa` son míos, de la idea al SVG.</sub>
 
 ---
 
@@ -196,13 +200,13 @@ y [un ancla de expresión regular que se come el salto de línea final en el cod
 
 ## 🎓 Formación
 
-| | |
-|---|---|
-| **Maestría en Ciencia de Datos** *(en curso)* | CPAP – FIng, UdelaR |
-| **Especialista en Ciencia de Datos** | CPAP – FIng, UdelaR |
-| **Licenciado en Educación** | Universidad Católica del Uruguay |
-| **Sistemas de Información Geográfica e Innovación Ambiental** | Universidad Católica del Uruguay |
-| **Técnico en Educación para el Tiempo Libre y la Recreación** | Universidad Católica del Uruguay |
+<table>
+<tr><td><strong>Maestría en Ciencia de Datos</strong> <em>(en curso)</em></td><td>CPAP – FIng, UdelaR</td></tr>
+<tr><td><strong>Especialista en Ciencia de Datos</strong></td><td>CPAP – FIng, UdelaR</td></tr>
+<tr><td><strong>Licenciado en Educación</strong></td><td>Universidad Católica del Uruguay</td></tr>
+<tr><td><strong>Sistemas de Información Geográfica e Innovación Ambiental</strong></td><td>Universidad Católica del Uruguay</td></tr>
+<tr><td><strong>Técnico en Educación para el Tiempo Libre y la Recreación</strong></td><td>Universidad Católica del Uruguay</td></tr>
+</table>
 
 ---
 
@@ -221,12 +225,12 @@ y [un ancla de expresión regular que se come el salto de línea final en el cod
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=sebollin&theme=github_dark" />
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=sebollin&theme=github_light" alt="Repositorios por lenguaje" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tarjetas/1-repos-per-language.github_dark.svg" />
+  <img height="170" src="assets/tarjetas/1-repos-per-language.github.svg" alt="Repositorios por lenguaje" />
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=sebollin&theme=github_dark" />
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=sebollin&theme=github_light" alt="Lenguaje más usado" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tarjetas/2-most-commit-language.github_dark.svg" />
+  <img height="170" src="assets/tarjetas/2-most-commit-language.github.svg" alt="Lenguaje más usado" />
 </picture>
 
 </div>
