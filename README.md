@@ -65,7 +65,9 @@ install.packages("bigbang")
 [![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Descargas](https://cranlogs.r-pkg.org/badges/grand-total/bigbang)](https://cran.r-project.org/package=bigbang)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/bigbang/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/bigbang/actions/workflows/R-CMD-check.yaml)
+[![Cobertura](https://img.shields.io/codecov/c/github/sebollin/bigbang?label=cobertura)](https://app.codecov.io/gh/sebollin/bigbang)
 [![Sitio](https://img.shields.io/badge/documentaci%C3%B3n-sebollin.github.io%2Fbigbang-0e7c7b)](https://sebollin.github.io/bigbang/)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23192961-1682D4)](https://doi.org/10.5281/zenodo.23192961)
 
 </td>
 <td width="50%" valign="top">
