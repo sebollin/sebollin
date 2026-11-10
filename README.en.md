@@ -7,7 +7,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sebalucas-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sebalucas/)
 [![Email](https://img.shields.io/badge/Email-sebalucas@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sebalucas@gmail.com)
-[![CRAN](https://img.shields.io/badge/CRAN-bigbang-198CE7?style=for-the-badge&logo=r&logoColor=white)](https://cran.r-project.org/package=bigbang)
+[![CRAN](https://img.shields.io/badge/CRAN-bigbang%20%C2%B7%20lupa-198CE7?style=for-the-badge&logo=r&logoColor=white)](https://cran.r-project.org/web/checks/check_results_sebalucas_at_gmail.com.html)
 [![r-universe](https://img.shields.io/badge/r--universe-sebollin-0e7c7b?style=for-the-badge&logo=r&logoColor=white)](https://sebollin.r-universe.dev/)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0009--9068--0276-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0009-9068-0276)
 
@@ -47,9 +47,37 @@ I show a convenient answer.
 
 <table>
 <tr>
+<td colspan="2" valign="top">
+
+### [lupa](https://github.com/sebollin/lupa) <a href="https://sebollin.github.io/lupa/"><img src="https://raw.githubusercontent.com/sebollin/lupa/main/man/figures/logo.png" align="right" height="120" alt="lupa logo" /></a>
+
+**On CRAN.** End-to-end data quality, and **auditable**: every result states its
+scope, its evidence and what it could not measure. The original data never
+changes silently.
+
+- 🔎 **Profile** — what `summary()` misses: missing values disguised as `"S/D"` (*no data*) or `-99`, mixed date formats, keys and relationships nobody declared. With the rows where each problem lives.
+- 📏 **Measure** — with your own quality framework or the ones it ships: AGESIC's for digital government, the United Nations statistical quality assurance framework as adapted by ECLAC, and ISO/IEC 25012.
+- 🧹 **Clean** — a copy, with an editable plan and an audit log.
+- 📈 **Track** — delivery-to-delivery comparison, quality history and drift detection, in a self-contained HTML report.
+- 🗄️ **Scale** — profiles inside the database, on six SQL engines, and finds near-duplicates with MinHash/LSH.
+
+```r
+install.packages("lupa")
+```
+
+[![CRAN](https://www.r-pkg.org/badges/version/lupa)](https://cran.r-project.org/package=lupa)
+[![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/lupa)](https://cran.r-project.org/package=lupa)
+[![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/lupa/actions/workflows/R-CMD-check.yaml)
+[![Docs](https://img.shields.io/badge/docs-sebollin.github.io%2Flupa-0e7c7b)](https://sebollin.github.io/lupa/)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24117753-1682D4)](https://doi.org/10.5281/zenodo.24117753)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
-### 🌌 [bigbang](https://github.com/sebollin/bigbang)
+### [bigbang](https://github.com/sebollin/bigbang) <a href="https://sebollin.github.io/bigbang/"><img src="https://raw.githubusercontent.com/sebollin/bigbang/main/man/figures/logo.png" align="right" height="100" alt="bigbang logo" /></a>
 
 **On CRAN.** Builds *tidyverse*-style meta-packages from local package archives
 (`.tar.gz` / `.zip`). Made for teams behind an institutional firewall: it works
@@ -62,6 +90,7 @@ install.packages("bigbang")
 [![CRAN](https://www.r-pkg.org/badges/version/bigbang)](https://cran.r-project.org/package=bigbang)
 [![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/bigbang)](https://cran.r-project.org/package=bigbang)
+[![Downloads last month](https://cranlogs.r-pkg.org/badges/bigbang)](https://cran.r-project.org/package=bigbang)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/bigbang/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/bigbang/actions/workflows/R-CMD-check.yaml)
 [![Coverage](https://img.shields.io/codecov/c/github/sebollin/bigbang?label=coverage)](https://app.codecov.io/gh/sebollin/bigbang)
 [![Docs](https://img.shields.io/badge/docs-sebollin.github.io%2Fbigbang-0e7c7b)](https://sebollin.github.io/bigbang/)
@@ -70,41 +99,20 @@ install.packages("bigbang")
 </td>
 <td width="50%" valign="top">
 
-### 🔎 [lupa](https://github.com/sebollin/lupa)
-
-Data profiling, quality measurement and duplicate search at scale, and
-**auditable**: it states the scope, evidence and uncertainty of every result,
-and never changes your data silently.
-
-```r
-install.packages("lupa", repos = c(
-  "https://sebollin.r-universe.dev",
-  "https://cloud.r-project.org"))
-```
-
-[![r-universe](https://sebollin.r-universe.dev/lupa/badges/version)](https://sebollin.r-universe.dev/lupa)
-[![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/lupa/actions/workflows/R-CMD-check.yaml)
-[![Docs](https://img.shields.io/badge/docs-sebollin.github.io%2Flupa-0e7c7b)](https://sebollin.github.io/lupa/)
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
-### 🗺️ [geouy](https://github.com/Richard-Detomasi/geouy) · co-author
+### [geouy](https://github.com/Richard-Detomasi/geouy) · co-author <a href="https://github.com/Richard-Detomasi/geouy"><img src="https://raw.githubusercontent.com/Richard-Detomasi/geouy/master/man/figures/geouy_logo_b.png" align="right" height="100" alt="geouy logo" /></a>
 
 Official geographic data for Uruguay —layers from INE, IDE, MIDES, MTOP and
 the environment ministry, among others— ready to use in R as `sf` objects.
 Created and maintained by [Richard Detomasi](https://github.com/Richard-Detomasi).
-It spent five years on CRAN until it was archived in 2025; the work is bringing
-it back: finding out what broke, fixing it, and getting it ready to return.
+It spent five years on CRAN until it was archived in 2025. We got it back into
+shape, and version 0.3.0 is now under CRAN review; in the meantime, install it
+from GitHub:
 
 ```r
 pak::pak("Richard-Detomasi/geouy")
 ```
 
-[![CRAN](https://img.shields.io/badge/CRAN-archived%20in%202025-lightgrey)](https://cran.r-project.org/package=geouy)
+[![CRAN](https://img.shields.io/badge/CRAN-0.3.0%20under%20review-f2b705)](https://cran.r-project.org/package=geouy)
 [![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/geouy)](https://cran.r-project.org/package=geouy)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/Richard-Detomasi/geouy/R-CMD-check.yaml?branch=master&label=R%20CMD%20check)](https://github.com/Richard-Detomasi/geouy/actions/workflows/R-CMD-check.yaml)
@@ -125,7 +133,7 @@ and their hex stickers are in the [hexSticker gallery](https://github.com/Guangc
 
 - 📊 **UdelaR procurement monitor** *(SeCIU)* — around **100,000 purchases** in a [Shiny](https://shiny.posit.co/) dashboard with several visualisations and cross-filters, hand-written CSS included.
 - 🏛️ **[tus-ipm-microsimulacion](https://github.com/sebollin/tus-ipm-microsimulacion)** — microsimulation of how increases in Uruguay's *Tarjeta Uruguay Social* affect **multidimensional poverty** (ECH 2025): aggregate results, reproducible figures, and the methodological architecture.
-- 🧰 **[lupa](https://github.com/sebollin/lupa)** and **[bigbang](https://github.com/sebollin/bigbang)** — the two tools above; I wrote them because I needed them and they did not exist.
+- 🧰 **[lupa](https://github.com/sebollin/lupa)** and **[bigbang](https://github.com/sebollin/bigbang)** — the two packages above that are mine; I wrote them because I needed them and they did not exist.
 - 🗺️ **CARTOGRAFÍA URGENTE** — survey and analysis of the geographic distribution of educational provision for children and adolescents in Montevideo.
 
 And after hours: optimisation and forecasting models for problems nobody cares

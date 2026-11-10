@@ -7,7 +7,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sebalucas-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sebalucas/)
 [![Correo](https://img.shields.io/badge/Correo-sebalucas@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sebalucas@gmail.com)
-[![CRAN](https://img.shields.io/badge/CRAN-bigbang-198CE7?style=for-the-badge&logo=r&logoColor=white)](https://cran.r-project.org/package=bigbang)
+[![CRAN](https://img.shields.io/badge/CRAN-bigbang%20%C2%B7%20lupa-198CE7?style=for-the-badge&logo=r&logoColor=white)](https://cran.r-project.org/web/checks/check_results_sebalucas_at_gmail.com.html)
 [![r-universe](https://img.shields.io/badge/r--universe-sebollin-0e7c7b?style=for-the-badge&logo=r&logoColor=white)](https://sebollin.r-universe.dev/)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0009--9068--0276-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0009-9068-0276)
 
@@ -39,9 +39,9 @@ antes que una respuesta cómoda.
 
 > **In short** — Data scientist and educator from Uruguay, 17 years in.
 > I build auditable R tooling for public-policy data: profiling, data quality,
-> record linkage. `bigbang` is on CRAN, `lupa` on r-universe, and I co-author
-> `geouy`, an archived CRAN package I'm helping bring back; plus fixes proposed
-> to `ftfy`. → **[English version](README.en.md)**
+> record linkage. `lupa` and `bigbang` are on CRAN, and I co-author `geouy`,
+> archived in 2025 and now back under CRAN review; plus fixes proposed to
+> `ftfy`. → **[English version](README.en.md)**
 
 ---
 
@@ -49,9 +49,37 @@ antes que una respuesta cómoda.
 
 <table>
 <tr>
+<td colspan="2" valign="top">
+
+### [lupa](https://github.com/sebollin/lupa) <a href="https://sebollin.github.io/lupa/"><img src="https://raw.githubusercontent.com/sebollin/lupa/main/man/figures/logo.png" align="right" height="120" alt="logo de lupa" /></a>
+
+**En CRAN.** Calidad de datos de punta a punta, y **auditable**: cada resultado
+declara su alcance, su evidencia y lo que no pudo medir. El dato original nunca
+cambia en silencio.
+
+- 🔎 **Perfilar** — lo que `summary()` no ve: faltantes disfrazados de `"S/D"` o de `-99`, fechas en formatos mezclados, claves y relaciones que nadie declaró. Con las filas donde está cada problema.
+- 📏 **Medir** — con un marco de calidad propio o con los que trae implementados: el de gobierno digital de AGESIC, el de aseguramiento de la calidad estadística de Naciones Unidas en su adaptación de la CEPAL, e ISO/IEC 25012.
+- 🧹 **Limpiar** — una copia, con un plan editable y registro de auditoría.
+- 📈 **Seguir** — comparación de entregas, histórico de calidad y detección de deriva, en un informe HTML autocontenido.
+- 🗄️ **Escalar** — perfila dentro de la base, en seis motores SQL, y busca duplicados aproximados con MinHash/LSH.
+
+```r
+install.packages("lupa")
+```
+
+[![CRAN](https://www.r-pkg.org/badges/version/lupa)](https://cran.r-project.org/package=lupa)
+[![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Descargas](https://cranlogs.r-pkg.org/badges/grand-total/lupa)](https://cran.r-project.org/package=lupa)
+[![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/lupa/actions/workflows/R-CMD-check.yaml)
+[![Sitio](https://img.shields.io/badge/documentaci%C3%B3n-sebollin.github.io%2Flupa-0e7c7b)](https://sebollin.github.io/lupa/)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24117753-1682D4)](https://doi.org/10.5281/zenodo.24117753)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
-### 🌌 [bigbang](https://github.com/sebollin/bigbang)
+### [bigbang](https://github.com/sebollin/bigbang) <a href="https://sebollin.github.io/bigbang/"><img src="https://raw.githubusercontent.com/sebollin/bigbang/main/man/figures/logo.png" align="right" height="100" alt="logo de bigbang" /></a>
 
 **En CRAN.** Arma metapaquetes estilo *tidyverse* a partir de paquetes locales
 (`.tar.gz` / `.zip`). Pensado para equipos detrás de un firewall
@@ -64,6 +92,7 @@ install.packages("bigbang")
 [![CRAN](https://www.r-pkg.org/badges/version/bigbang)](https://cran.r-project.org/package=bigbang)
 [![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Descargas](https://cranlogs.r-pkg.org/badges/grand-total/bigbang)](https://cran.r-project.org/package=bigbang)
+[![Descargas del último mes](https://cranlogs.r-pkg.org/badges/bigbang)](https://cran.r-project.org/package=bigbang)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/bigbang/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/bigbang/actions/workflows/R-CMD-check.yaml)
 [![Cobertura](https://img.shields.io/codecov/c/github/sebollin/bigbang?label=cobertura)](https://app.codecov.io/gh/sebollin/bigbang)
 [![Sitio](https://img.shields.io/badge/documentaci%C3%B3n-sebollin.github.io%2Fbigbang-0e7c7b)](https://sebollin.github.io/bigbang/)
@@ -72,41 +101,20 @@ install.packages("bigbang")
 </td>
 <td width="50%" valign="top">
 
-### 🔎 [lupa](https://github.com/sebollin/lupa)
-
-Perfilado, calidad de datos y búsqueda de duplicados a escala, **auditable**:
-declara alcance, evidencia e incertidumbre de cada resultado. Nunca cambia el
-dato original en silencio.
-
-```r
-install.packages("lupa", repos = c(
-  "https://sebollin.r-universe.dev",
-  "https://cloud.r-project.org"))
-```
-
-[![r-universe](https://sebollin.r-universe.dev/lupa/badges/version)](https://sebollin.r-universe.dev/lupa)
-[![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/lupa/actions/workflows/R-CMD-check.yaml)
-[![Sitio](https://img.shields.io/badge/documentaci%C3%B3n-sebollin.github.io%2Flupa-0e7c7b)](https://sebollin.github.io/lupa/)
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
-### 🗺️ [geouy](https://github.com/Richard-Detomasi/geouy) · coautor
+### [geouy](https://github.com/Richard-Detomasi/geouy) · coautor <a href="https://github.com/Richard-Detomasi/geouy"><img src="https://raw.githubusercontent.com/Richard-Detomasi/geouy/master/man/figures/geouy_logo_b.png" align="right" height="100" alt="logo de geouy" /></a>
 
 Datos geográficos oficiales de Uruguay —capas del INE, la IDE, el MIDES, el MTOP
 y Ambiente, entre otras— listos para usar en R como objetos `sf`. Lo creó y lo
 mantiene [Richard Detomasi](https://github.com/Richard-Detomasi). Estuvo cinco
-años en CRAN hasta que lo archivaron en 2025, y el trabajo es devolverlo a la
-vida: encontrar qué se rompió, arreglarlo y dejarlo en condiciones de volver.
+años en CRAN hasta que lo archivaron en 2025. Lo dejamos otra vez en
+condiciones, y la versión 0.3.0 ya está en revisión en CRAN; mientras tanto, se
+instala desde GitHub:
 
 ```r
 pak::pak("Richard-Detomasi/geouy")
 ```
 
-[![CRAN](https://img.shields.io/badge/CRAN-archivado%20en%202025-lightgrey)](https://cran.r-project.org/package=geouy)
+[![CRAN](https://img.shields.io/badge/CRAN-0.3.0%20en%20revisi%C3%B3n-f2b705)](https://cran.r-project.org/package=geouy)
 [![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Descargas](https://cranlogs.r-pkg.org/badges/grand-total/geouy)](https://cran.r-project.org/package=geouy)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/Richard-Detomasi/geouy/R-CMD-check.yaml?branch=master&label=R%20CMD%20check)](https://github.com/Richard-Detomasi/geouy/actions/workflows/R-CMD-check.yaml)
@@ -127,7 +135,7 @@ de Estación R, y sus hexágonos, en la [galería de hexSticker](https://github.
 
 - 📊 **Monitor de compras de la UdelaR** *(SeCIU)* — cerca de **100.000 compras** en un tablero de [Shiny](https://shiny.posit.co/) con múltiples visualizaciones y filtros cruzados, CSS propio incluido.
 - 🏛️ **[tus-ipm-microsimulacion](https://github.com/sebollin/tus-ipm-microsimulacion)** — microsimulación del efecto de aumentos de la Tarjeta Uruguay Social sobre la **pobreza multidimensional** (ECH 2025): resultados agregados, figuras reproducibles y la arquitectura metodológica.
-- 🧰 **[lupa](https://github.com/sebollin/lupa)** y **[bigbang](https://github.com/sebollin/bigbang)** — las dos herramientas de acá arriba; las escribí porque me hacían falta y no existían.
+- 🧰 **[lupa](https://github.com/sebollin/lupa)** y **[bigbang](https://github.com/sebollin/bigbang)** — los dos paquetes míos de acá arriba; los escribí porque me hacían falta y no existían.
 - 🗺️ **CARTOGRAFÍA URGENTE** — relevamiento y análisis de la distribución geográfica de las propuestas educativas de Montevideo para niñas, niños y adolescentes.
 
 Y fuera del horario: optimización y modelos de pronóstico para problemas que no
