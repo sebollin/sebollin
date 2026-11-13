@@ -1,0 +1,48 @@
+# Recalcula todos los días las cifras de los badges de paquetes del perfil
+# (descargas totales, del mes y posición entre los debuts de CRAN) y las guarda
+# en la rama `badges`, para que la rama principal no se llene de commits
+# diarios. El método está explicado en .github/scripts/badges.R.
+
+name: badges
+
+on:
+  schedule:
+    - cron: "41 15 * * *" # todos los días; cranlogs publica el día anterior
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  badges:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          ref: badges
+          path: rama-badges
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Instalar jsonlite
+        run: Rscript -e 'install.packages("jsonlite")'
+
+      - name: Calcular las cifras
+        run: Rscript .github/scripts/badges.R rama-badges
+
+      - name: Commitear sólo si cambiaron
+        working-directory: rama-badges
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Las cifras no cambiaron."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Actualiza las cifras de los badges"
+          git push

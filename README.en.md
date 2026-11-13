@@ -70,8 +70,8 @@ install.packages("lupa")
 ```
 
 [![CRAN](https://www.r-pkg.org/badges/version/lupa)](https://cran.r-project.org/package=lupa)
-[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2012-10-01%3A2099-12-31%2Flupa&query=%24%5B0%5D.downloads&label=downloads&color=blue)](https://cran.r-project.org/package=lupa)
-[![Downloads last month](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2Flast-month%2Flupa&query=%24%5B0%5D.downloads&label=downloads&suffix=%2Fmonth&color=blue)](https://cran.r-project.org/package=lupa)
+[![Downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Flupa-total.en.json)](https://cran.r-project.org/package=lupa)
+[![Downloads last month](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Flupa-mes.en.json)](https://cran.r-project.org/package=lupa)
 [![Dependencies](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Ftinyverse.netlify.app%2Fbadge%2Flupa&query=substring-after%28%2F%2F%2A%5Blocal-name%28%29%3D%27title%27%5D%2C%27%3A%20%27%29&label=dependencies&color=67ac09)](https://cran.r-project.org/package=lupa)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/lupa/actions/workflows/R-CMD-check.yaml)
 [![SQL engines](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/motores.yaml?branch=main&label=SQL%20engines)](https://github.com/sebollin/lupa/actions/workflows/motores.yaml)
@@ -95,9 +95,9 @@ install.packages("bigbang")
 ```
 
 [![CRAN](https://www.r-pkg.org/badges/version/bigbang)](https://cran.r-project.org/package=bigbang)
-[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2012-10-01%3A2099-12-31%2Fbigbang&query=%24%5B0%5D.downloads&label=downloads&color=blue)](https://cran.r-project.org/package=bigbang)
-[![Downloads last month](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2Flast-month%2Fbigbang&query=%24%5B0%5D.downloads&label=downloads&suffix=%2Fmonth&color=blue)](https://cran.r-project.org/package=bigbang)
-[![Standing among 2026 CRAN debuts](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fmain%2Fassets%2Fbadges%2Fbigbang.en.json)](https://github.com/sebollin/sebollin/blob/main/.github/scripts/posicion.R)
+[![Downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fbigbang-total.en.json)](https://cran.r-project.org/package=bigbang)
+[![Downloads last month](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fbigbang-mes.en.json)](https://cran.r-project.org/package=bigbang)
+[![Standing among 2026 CRAN debuts](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fbigbang-posicion.en.json)](https://github.com/sebollin/sebollin/blob/main/.github/scripts/badges.R)
 [![Dependencies](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Ftinyverse.netlify.app%2Fbadge%2Fbigbang&query=substring-after%28%2F%2F%2A%5Blocal-name%28%29%3D%27title%27%5D%2C%27%3A%20%27%29&label=dependencies&color=67ac09)](https://cran.r-project.org/package=bigbang)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/bigbang/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/bigbang/actions/workflows/R-CMD-check.yaml)
 [![Coverage](https://img.shields.io/codecov/c/github/sebollin/bigbang?label=coverage)](https://app.codecov.io/gh/sebollin/bigbang)
@@ -122,7 +122,7 @@ pak::pak("Richard-Detomasi/geouy")
 ```
 
 [![CRAN](https://img.shields.io/badge/CRAN-0.3.0%20under%20review-f2b705)](https://cran.r-project.org/package=geouy)
-[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2012-10-01%3A2099-12-31%2Fgeouy&query=%24%5B0%5D.downloads&label=downloads&color=blue)](https://cran.r-project.org/package=geouy)
+[![Downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fgeouy-total.en.json)](https://cran.r-project.org/package=geouy)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/Richard-Detomasi/geouy/R-CMD-check.yaml?branch=master&label=R%20CMD%20check)](https://github.com/Richard-Detomasi/geouy/actions/workflows/R-CMD-check.yaml)
 [![Coverage](https://img.shields.io/codecov/c/github/Richard-Detomasi/geouy/master?label=coverage)](https://app.codecov.io/gh/Richard-Detomasi/geouy?branch=master)
 [![Status](https://img.shields.io/badge/repo%20status-active-4c1)](https://www.repostatus.org/#active)
