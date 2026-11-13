@@ -21,8 +21,8 @@
 
 ## 👋 Quién soy
 
-Empecé adentro de un aula y hoy, **18 años después**, trabajo adentro de los
-datos —los de las transferencias que decide el Estado, los de las compras de una
+Empecé adentro de un aula en **2008** y hoy trabajo adentro de los datos —los
+de las transferencias que decide el Estado, los de las compras de una
 universidad, y los de cualquier problema que se deje modelar—. La pregunta es
 siempre la misma: qué dice este dato, y qué no puede decir. Del aula no me fui
 del todo: sigo coordinando talleres en un liceo público.
@@ -35,8 +35,8 @@ del todo: sigo coordinando talleres en un liceo público.
 **Auditable antes que automático**: muestro alcance, evidencia e incertidumbre
 antes que una respuesta cómoda.
 
-> **In English** — A Uruguayan data scientist who started out in a classroom 18
-> years ago. I analyse cash-transfer data at the Ministry of Social Development,
+> **In English** — A Uruguayan data scientist who started out in a classroom in
+> 2008. I analyse cash-transfer data at the Ministry of Social Development,
 > as a UNFPA consultant, and build dashboards at Universidad de la República.
 > Two of my R packages are on CRAN: `lupa`, for auditable data quality, and
 > `bigbang`, for meta-packages that work offline. I co-author `geouy`, archived
@@ -86,7 +86,8 @@ install.packages("lupa")
 
 **En CRAN.** Arma metapaquetes estilo *tidyverse* a partir de paquetes locales
 (`.tar.gz` / `.zip`). Pensado para equipos detrás de un firewall
-institucional: funciona sin internet.
+institucional: funciona sin internet. La idea surgió de mi trabajo en DINTAD,
+pero es un proyecto personal, desarrollado por fuera del MIDES.
 
 ```r
 install.packages("bigbang")

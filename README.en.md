@@ -21,7 +21,7 @@
 
 ## 👋 Who I am
 
-I started inside a classroom and now, **18 years on**, I work inside the data —
+I started inside a classroom in **2008** and now I work inside the data —
 the state's cash transfers, a university's procurement, and any problem that
 lets itself be modelled. The question is always the same: what this data says,
 and what it cannot. I have not entirely left the classroom: I still coordinate
@@ -36,7 +36,7 @@ workshops at a state secondary school.
 than a comfortable answer.
 
 > **En español** — Científico de datos uruguayo que empezó adentro de un aula
-> hace 18 años. Analizo los datos de las transferencias monetarias en el
+> en 2008. Analizo los datos de las transferencias monetarias en el
 > Ministerio de Desarrollo Social, como consultor de UNFPA, y hago tableros en la
 > Universidad de la República. Tengo dos paquetes de R en CRAN: `lupa`, para la
 > calidad de datos auditable, y `bigbang`, para metapaquetes que funcionan sin
@@ -86,7 +86,8 @@ install.packages("lupa")
 
 **On CRAN.** Builds *tidyverse*-style meta-packages from local package archives
 (`.tar.gz` / `.zip`). Made for teams behind an institutional firewall: it works
-offline.
+offline. The idea grew out of my work at DINTAD, but bigbang is a personal
+project, developed outside the ministry.
 
 ```r
 install.packages("bigbang")
