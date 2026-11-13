@@ -66,9 +66,12 @@ install.packages("lupa")
 ```
 
 [![CRAN](https://www.r-pkg.org/badges/version/lupa)](https://cran.r-project.org/package=lupa)
-[![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/lupa)](https://cran.r-project.org/package=lupa)
+[![Downloads last month](https://cranlogs.r-pkg.org/badges/lupa)](https://cran.r-project.org/package=lupa)
+[![Dependencies](https://tinyverse.netlify.app/badge/lupa)](https://cran.r-project.org/package=lupa)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/lupa/actions/workflows/R-CMD-check.yaml)
+[![SQL engines](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/motores.yaml?branch=main&label=SQL%20engines)](https://github.com/sebollin/lupa/actions/workflows/motores.yaml)
+[![Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Docs](https://img.shields.io/badge/docs-sebollin.github.io%2Flupa-0e7c7b)](https://sebollin.github.io/lupa/)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24117753-1682D4)](https://doi.org/10.5281/zenodo.24117753)
 
@@ -88,11 +91,13 @@ install.packages("bigbang")
 ```
 
 [![CRAN](https://www.r-pkg.org/badges/version/bigbang)](https://cran.r-project.org/package=bigbang)
-[![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/bigbang)](https://cran.r-project.org/package=bigbang)
 [![Downloads last month](https://cranlogs.r-pkg.org/badges/bigbang)](https://cran.r-project.org/package=bigbang)
+[![Standing among 2026 CRAN debuts](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fmain%2Fassets%2Fbadges%2Fbigbang.en.json)](https://github.com/sebollin/sebollin/blob/main/.github/scripts/posicion.R)
+[![Dependencies](https://tinyverse.netlify.app/badge/bigbang)](https://cran.r-project.org/package=bigbang)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/bigbang/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/bigbang/actions/workflows/R-CMD-check.yaml)
 [![Coverage](https://img.shields.io/codecov/c/github/sebollin/bigbang?label=coverage)](https://app.codecov.io/gh/sebollin/bigbang)
+[![Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Docs](https://img.shields.io/badge/docs-sebollin.github.io%2Fbigbang-0e7c7b)](https://sebollin.github.io/bigbang/)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23192961-1682D4)](https://doi.org/10.5281/zenodo.23192961)
 
@@ -113,9 +118,10 @@ pak::pak("Richard-Detomasi/geouy")
 ```
 
 [![CRAN](https://img.shields.io/badge/CRAN-0.3.0%20under%20review-f2b705)](https://cran.r-project.org/package=geouy)
-[![Estado](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/geouy)](https://cran.r-project.org/package=geouy)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/Richard-Detomasi/geouy/R-CMD-check.yaml?branch=master&label=R%20CMD%20check)](https://github.com/Richard-Detomasi/geouy/actions/workflows/R-CMD-check.yaml)
+[![Coverage](https://img.shields.io/codecov/c/github/Richard-Detomasi/geouy/master?label=coverage)](https://app.codecov.io/gh/Richard-Detomasi/geouy?branch=master)
+[![Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![CRAN Task View](https://img.shields.io/badge/CRAN%20Task%20View-Spatial-198CE7)](https://cran.r-project.org/web/views/Spatial.html)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.3610246-1682D4)](https://doi.org/10.5281/zenodo.3610246)
 
@@ -124,8 +130,8 @@ pak::pak("Richard-Detomasi/geouy")
 </table>
 
 `bigbang` and `lupa` can also be installed from **[sebollin.r-universe.dev](https://sebollin.r-universe.dev/)**.
-`bigbang` and `geouy` are listed in Estación R's [catalogue of Latin American R packages](https://github.com/Estacion-R/asombrosos-paquetes-r-latinoamerica),
-and their hex stickers are in the [hexSticker gallery](https://github.com/GuangchuangYu/hexSticker#stickers-for-software-packages).
+`bigbang`, `lupa` and `geouy` are listed in Estación R's [catalogue of Latin American R packages](https://github.com/Estacion-R/asombrosos-paquetes-r-latinoamerica),
+and the hex stickers of `bigbang` and `geouy` are in the [hexSticker gallery](https://github.com/GuangchuangYu/hexSticker#stickers-for-software-packages).
 
 ---
 
