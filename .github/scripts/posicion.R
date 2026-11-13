@@ -53,10 +53,10 @@ descargas_30 <- function(pkgs) {
 }
 
 textos <- list(
-  es = list(etiqueta = "descargas del mes",
-            mensaje = function(p, a) sprintf("top %d %% de los debuts de %s en CRAN", p, a)),
-  en = list(etiqueta = "monthly downloads",
-            mensaje = function(p, a) sprintf("top %d%% of %s CRAN debuts", p, a))
+  es = list(etiqueta = function(a) sprintf("debuts de %s en CRAN", a),
+            mensaje = function(p) sprintf("top %d %% en descargas del mes", p)),
+  en = list(etiqueta = function(a) sprintf("%s CRAN debuts", a),
+            mensaje = function(p) sprintf("top %d%% in monthly downloads", p))
 )
 
 dir.create(salida, recursive = TRUE, showWarnings = FALSE)
@@ -80,7 +80,7 @@ for (pk in paquetes) {
   for (idioma in names(textos)) {
     tx <- textos[[idioma]]
     jsonlite::write_json(
-      list(schemaVersion = 1, label = tx$etiqueta, message = tx$mensaje(pct, anio),
+      list(schemaVersion = 1, label = tx$etiqueta(anio), message = tx$mensaje(pct),
            color = color),
       file.path(salida, sprintf("%s.%s.json", pk, idioma)),
       auto_unbox = TRUE, pretty = TRUE)

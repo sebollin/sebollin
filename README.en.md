@@ -37,9 +37,13 @@ it not say?
 **Auditable before automatic**: I show scope, evidence and uncertainty before
 I show a convenient answer.
 
-> **En resumen** — Licenciado en Educación devenido científico de datos, 17 años
-> de trabajo. Construyo herramientas auditables en R para datos de política
-> pública. → **[Versión en español](README.md)**
+> **En español** — Licenciado en Educación que se volvió científico de datos,
+> uruguayo, con 17 años de trabajo. Analizo los datos de las transferencias
+> monetarias en el Ministerio de Desarrollo Social y hago tableros en la
+> Universidad de la República. Tengo dos paquetes de R en CRAN: `lupa`, para la
+> calidad de datos auditable, y `bigbang`, para metapaquetes que funcionan sin
+> internet. Soy coautor de `geouy`, archivado en 2025 y otra vez en revisión en
+> CRAN, y propuse arreglos a la biblioteca de Python `ftfy`. → **[Perfil completo en español](README.md)**
 
 ---
 
@@ -66,12 +70,12 @@ install.packages("lupa")
 ```
 
 [![CRAN](https://www.r-pkg.org/badges/version/lupa)](https://cran.r-project.org/package=lupa)
-[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/lupa)](https://cran.r-project.org/package=lupa)
-[![Downloads last month](https://cranlogs.r-pkg.org/badges/lupa)](https://cran.r-project.org/package=lupa)
-[![Dependencies](https://tinyverse.netlify.app/badge/lupa)](https://cran.r-project.org/package=lupa)
+[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2012-10-01%3A2099-12-31%2Flupa&query=%24%5B0%5D.downloads&label=downloads&color=blue)](https://cran.r-project.org/package=lupa)
+[![Downloads last month](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2Flast-month%2Flupa&query=%24%5B0%5D.downloads&label=downloads&suffix=%2Fmonth&color=blue)](https://cran.r-project.org/package=lupa)
+[![Dependencies](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Ftinyverse.netlify.app%2Fbadge%2Flupa&query=substring-after%28%2F%2F%2A%5Blocal-name%28%29%3D%27title%27%5D%2C%27%3A%20%27%29&label=dependencies&color=67ac09)](https://cran.r-project.org/package=lupa)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/lupa/actions/workflows/R-CMD-check.yaml)
 [![SQL engines](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/motores.yaml?branch=main&label=SQL%20engines)](https://github.com/sebollin/lupa/actions/workflows/motores.yaml)
-[![Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Status](https://img.shields.io/badge/repo%20status-active-4c1)](https://www.repostatus.org/#active)
 [![Docs](https://img.shields.io/badge/docs-sebollin.github.io%2Flupa-0e7c7b)](https://sebollin.github.io/lupa/)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24117753-1682D4)](https://doi.org/10.5281/zenodo.24117753)
 
@@ -91,13 +95,13 @@ install.packages("bigbang")
 ```
 
 [![CRAN](https://www.r-pkg.org/badges/version/bigbang)](https://cran.r-project.org/package=bigbang)
-[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/bigbang)](https://cran.r-project.org/package=bigbang)
-[![Downloads last month](https://cranlogs.r-pkg.org/badges/bigbang)](https://cran.r-project.org/package=bigbang)
+[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2012-10-01%3A2099-12-31%2Fbigbang&query=%24%5B0%5D.downloads&label=downloads&color=blue)](https://cran.r-project.org/package=bigbang)
+[![Downloads last month](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2Flast-month%2Fbigbang&query=%24%5B0%5D.downloads&label=downloads&suffix=%2Fmonth&color=blue)](https://cran.r-project.org/package=bigbang)
 [![Standing among 2026 CRAN debuts](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fmain%2Fassets%2Fbadges%2Fbigbang.en.json)](https://github.com/sebollin/sebollin/blob/main/.github/scripts/posicion.R)
-[![Dependencies](https://tinyverse.netlify.app/badge/bigbang)](https://cran.r-project.org/package=bigbang)
+[![Dependencies](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Ftinyverse.netlify.app%2Fbadge%2Fbigbang&query=substring-after%28%2F%2F%2A%5Blocal-name%28%29%3D%27title%27%5D%2C%27%3A%20%27%29&label=dependencies&color=67ac09)](https://cran.r-project.org/package=bigbang)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/bigbang/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/bigbang/actions/workflows/R-CMD-check.yaml)
 [![Coverage](https://img.shields.io/codecov/c/github/sebollin/bigbang?label=coverage)](https://app.codecov.io/gh/sebollin/bigbang)
-[![Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Status](https://img.shields.io/badge/repo%20status-active-4c1)](https://www.repostatus.org/#active)
 [![Docs](https://img.shields.io/badge/docs-sebollin.github.io%2Fbigbang-0e7c7b)](https://sebollin.github.io/bigbang/)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23192961-1682D4)](https://doi.org/10.5281/zenodo.23192961)
 
@@ -118,10 +122,10 @@ pak::pak("Richard-Detomasi/geouy")
 ```
 
 [![CRAN](https://img.shields.io/badge/CRAN-0.3.0%20under%20review-f2b705)](https://cran.r-project.org/package=geouy)
-[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/geouy)](https://cran.r-project.org/package=geouy)
+[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2012-10-01%3A2099-12-31%2Fgeouy&query=%24%5B0%5D.downloads&label=downloads&color=blue)](https://cran.r-project.org/package=geouy)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/Richard-Detomasi/geouy/R-CMD-check.yaml?branch=master&label=R%20CMD%20check)](https://github.com/Richard-Detomasi/geouy/actions/workflows/R-CMD-check.yaml)
 [![Coverage](https://img.shields.io/codecov/c/github/Richard-Detomasi/geouy/master?label=coverage)](https://app.codecov.io/gh/Richard-Detomasi/geouy?branch=master)
-[![Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Status](https://img.shields.io/badge/repo%20status-active-4c1)](https://www.repostatus.org/#active)
 [![CRAN Task View](https://img.shields.io/badge/CRAN%20Task%20View-Spatial-198CE7)](https://cran.r-project.org/web/views/Spatial.html)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.3610246-1682D4)](https://doi.org/10.5281/zenodo.3610246)
 
@@ -231,11 +235,11 @@ and [a regex anchor that swallows the trailing newline in the CESU-8 codec](http
 
 ## ✍️ Publications, talks and awards
 
-- **[{DADverse}. Simplifying data processing for public policy aimed at vulnerable populations in restricted-use environments](https://github.com/LatinR/presentaciones-LatinR2023/blob/main/papers/slides/DADverse.pdf)** — Lucas, S.; Detomasi, R. *LatinR 2023*.
-- **La Siembra. El legado de Aulas Comunitarias: un aporte a la educación uruguaya** — co-author of ch. 1.3.2. OBSUR, 2020.
-- **[El aula en movimiento: aportes metodológicos desde la Educación No Formal](https://www.gub.uy/ministerio-educacion-cultura/sites/ministerio-educacion-cultura/files/documentos/publicaciones/Revista_Enfoques_5.pdf)** — Catalurda, R.; Lucas, S.; González, W. *Enfoques, Revista de Educación No Formal*, Ministry of Education and Culture, v. 5, 2014.
-- **Talleres en el liceo… ¿para qué?** — Lucas, S.; Verdún, N. Talk at the «Alicia Goyena» Chair (CES–ANEP), 2016.
-- 🏆 **«Todo Suma» project** — creator and project lead. Winner of the *Concurso sobre Proyectos de Convivencia de los Centros Educativos*, Pelota al Medio a la Esperanza programme.
+- **[{DADverse}. Simplificando el procesamiento de datos para políticas públicas enfocadas en población vulnerable en ambientes de uso restringido](https://github.com/LatinR/presentaciones-LatinR2023/blob/main/papers/slides/DADverse.pdf)** [*Simplifying data processing for public policy aimed at vulnerable populations in restricted-use environments*] — Lucas, S.; Detomasi, R. *LatinR 2023*.
+- **La Siembra. El legado de Aulas Comunitarias: un aporte a la educación uruguaya** [*The Sowing. The legacy of Aulas Comunitarias: a contribution to Uruguayan education*] — co-author of ch. 1.3.2. OBSUR, 2020.
+- **[El aula en movimiento: aportes metodológicos desde la Educación No Formal](https://www.gub.uy/ministerio-educacion-cultura/sites/ministerio-educacion-cultura/files/documentos/publicaciones/Revista_Enfoques_5.pdf)** [*The classroom in motion: methodological contributions from non-formal education*] — Catalurda, R.; Lucas, S.; González, W. *Enfoques, Revista de Educación No Formal*, Ministry of Education and Culture, v. 5, 2014.
+- **Talleres en el liceo… ¿para qué?** [*Workshops at secondary school… what for?*] — Lucas, S.; Verdún, N. Talk at the “Alicia Goyena” Chair (CES–ANEP), 2016.
+- 🏆 **“Todo Suma” project** — creator and project lead. Winner of the *Concurso sobre Proyectos de Convivencia de los Centros Educativos* [*school coexistence projects contest*], Pelota al Medio a la Esperanza programme.
 
 ---
 

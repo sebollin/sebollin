@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "label": "monthly downloads",
-  "message": "top 9% of 2026 CRAN debuts",
+  "label": "2026 CRAN debuts",
+  "message": "top 9% in monthly downloads",
   "color": "2e7d32"
 }
