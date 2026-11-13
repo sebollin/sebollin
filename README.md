@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:0b2e4f,45:0e7c7b,75:4caf50,100:f2b705&text=Sebasti%C3%A1n%20Lucas&fontColor=ffffff&fontSize=48&fontAlignY=36&desc=Educador%20%2B%20cient%C3%ADfico%20de%20datos%20%C2%B7%20Bonsaicultor&descSize=17&descAlignY=57&animation=fadeIn" width="100%" alt="Sebastián Lucas" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:0b2e4f,45:0e7c7b,75:4caf50,100:f2b705&text=Sebasti%C3%A1n%20Lucas&fontColor=ffffff&fontSize=48&fontAlignY=36&desc=Cient%C3%ADfico%20de%20datos%20%2B%20educador%20%C2%B7%20Bonsaicultor&descSize=17&descAlignY=57&animation=fadeIn" width="100%" alt="Sebastián Lucas" />
 
 <img src="assets/typing.svg" width="748"
      alt="Modelado predictivo · Datos para la gestión universitaria, en Shiny · Datos para la orientación educativa · Datos para la política pública, en R, en Python, en SQL · Datos para lo que haga falta, en lo que haga falta" />
@@ -21,25 +21,23 @@
 
 ## 👋 Quién soy
 
-Licenciado en Educación que se volvió científico de datos. **17 años de
-trabajo**: empecé adentro de un aula y hoy trabajo adentro de los datos —los de
-las transferencias que decide el Estado, los de las compras de una universidad,
-y los de cualquier problema que se deje modelar—. La pregunta es siempre la
-misma: qué dice este dato, y qué no puede decir.
+Empecé adentro de un aula y hoy, **18 años después**, trabajo adentro de los
+datos —los de las transferencias que decide el Estado, los de las compras de una
+universidad, y los de cualquier problema que se deje modelar—. La pregunta es
+siempre la misma: qué dice este dato, y qué no puede decir. Del aula no me fui
+del todo: sigo coordinando talleres en un liceo público.
 
 - 🏛️ **Analista de datos** en la **Dirección Nacional de Transferencias y Análisis de Datos ([DINTAD](https://www.gub.uy/ministerio-desarrollo-social/))** del **MIDES**, como consultor de **[UNFPA](https://uruguay.unfpa.org/)**: gestión y análisis de los programas de transferencias monetarias a hogares en situación de vulnerabilidad socioeconómica.
-- 🎓 **Analista de datos** en el **[SeCIU](https://www.seciu.edu.uy/)** de la Universidad de la República: monitores y visualizadores institucionales en **R** y **Shiny**.
-- 📚 **Coordinador de talleres extracurriculares** en un liceo público, desde 2016; son 13 años en educación secundaria antes de esto. No lo dejé cuando cambié de rubro y no pienso dejarlo.
-- 🔬 Cursando la **Maestría en Ciencia de Datos** (CPAP–FIng, UdelaR).
-- 🌐 Sostengo el front-end y el mantenimiento de la tienda **[komorebibonsai.uy](https://komorebibonsai.uy)**, que es donde escribo el código que no lleva estadística.
-- 🌳 Cultivo bonsáis.
+- 📊 **Analista de datos** en el **[SeCIU](https://www.seciu.edu.uy/)** de la Universidad de la República: tableros institucionales en **R** y **Shiny**.
+- 🎓 **Especialista en Ciencia de Datos**; ahora curso la **Maestría** (CPAP–FIng, UdelaR).
+- 🌳 Cultivo bonsáis y mantengo el front-end de la tienda **[komorebibonsai.uy](https://komorebibonsai.uy)**, que es donde escribo el código que no lleva estadística.
 
 **Auditable antes que automático**: muestro alcance, evidencia e incertidumbre
 antes que una respuesta cómoda.
 
-> **In English** — An education graduate who became a data scientist, from
-> Uruguay, with 17 years of work. I analyse cash-transfer data at the Ministry
-> of Social Development and build dashboards at Universidad de la República.
+> **In English** — A Uruguayan data scientist who started out in a classroom 18
+> years ago. I analyse cash-transfer data at the Ministry of Social Development,
+> as a UNFPA consultant, and build dashboards at Universidad de la República.
 > Two of my R packages are on CRAN: `lupa`, for auditable data quality, and
 > `bigbang`, for meta-packages that work offline. I co-author `geouy`, archived
 > in 2025 and now back under CRAN review, and I have proposed fixes to the
