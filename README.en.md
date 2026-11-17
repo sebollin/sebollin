@@ -28,6 +28,7 @@ and what it cannot.
 
 - 🏛️ **Data analyst** at Uruguay's **National Directorate for Transfers and Data Analysis ([DINTAD](https://www.gub.uy/ministerio-desarrollo-social/))**, Ministry of Social Development, as a **[UNFPA](https://uruguay.unfpa.org/)** consultant: managing and analysing the cash-transfer programmes for socio-economically vulnerable households.
 - 📊 **Data analyst** at **[SeCIU](https://www.seciu.edu.uy/)**, Universidad de la República: institutional dashboards in **R** and **Shiny**.
+- 🏫 **Management and coordination** at Uruguay's **Directorate General of Secondary Education ([DGES](https://www.dges.edu.uy/))**: I still work in and for public education.
 - 🎓 **Postgraduate Specialist in Data Science**, now doing the **MSc** (CPAP–FIng, Universidad de la República).
 - 🌳 I grow bonsai and maintain the front-end of the **[komorebibonsai.uy](https://komorebibonsai.uy)** shop, which is where I write the code with no statistics in it.
 

@@ -28,6 +28,7 @@ siempre la misma: qué dice este dato, y qué no puede decir.
 
 - 🏛️ **Analista de datos** en la **Dirección Nacional de Transferencias y Análisis de Datos ([DINTAD](https://www.gub.uy/ministerio-desarrollo-social/))** del **MIDES**, como consultor de **[UNFPA](https://uruguay.unfpa.org/)**: gestión y análisis de los programas de transferencias monetarias a hogares en situación de vulnerabilidad socioeconómica.
 - 📊 **Analista de datos** en el **[SeCIU](https://www.seciu.edu.uy/)** de la Universidad de la República: tableros institucionales en **R** y **Shiny**.
+- 🏫 **Gestión y coordinación** en la **Dirección General de Educación Secundaria ([DGES](https://www.dges.edu.uy/))**: sigo trabajando en y para la educación pública.
 - 🎓 **Especialista en Ciencia de Datos**; ahora curso la **Maestría** (CPAP–FIng, UdelaR).
 - 🌳 Cultivo bonsáis y mantengo el front-end de la tienda **[komorebibonsai.uy](https://komorebibonsai.uy)**, que es donde escribo el código que no lleva estadística.
 
