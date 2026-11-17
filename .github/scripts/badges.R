@@ -1,12 +1,13 @@
 # Cifras de los badges de paquetes del perfil, en español y en inglés.
 #
-# Lo ejecuta todos los días .github/workflows/badges.yml. Escribe un JSON por
-# badge, con el formato «endpoint» de shields.io, en la carpeta que recibe como
-# argumento (en el workflow, la rama `badges`):
+# Lo ejecuta .github/workflows/badges.yml cada vez que cranlogs publica un día
+# nuevo. Escribe un JSON por badge, con el formato «endpoint» de shields.io, en
+# la carpeta que recibe como argumento (en el workflow, la rama `badges`):
 #
-#   <paquete>-total.<idioma>.json      descargas desde que está en CRAN
-#   <paquete>-mes.<idioma>.json        descargas de los últimos 30 días
+#   <paquete>-descargas.<idioma>.json  descargas en total y de los últimos 30 días
 #   <paquete>-posicion.<idioma>.json   posición entre los debuts de su año
+#   <paquete>-chequeos.<idioma>.json   resultado de los chequeos de CRAN
+#   ultimo-dia.txt                     último día que publicó cranlogs
 #
 # Descargas: las de cranlogs, que cuenta sólo el espejo de CRAN de Posit, el
 # único que publica descargas por paquete. Hasta 9999 se muestra la cifra
@@ -23,9 +24,13 @@
 #   4. El puesto es 1 + la cantidad de paquetes de la cohorte con más
 #      descargas, y el porcentaje se redondea hacia arriba (top 8,5 % → 9 %).
 #   Un paquete con menos de 30 días en CRAN queda afuera hasta cumplirlos.
+#
+# Chequeos de CRAN: los que CRAN corre en sus propias máquinas (13 plataformas),
+# de tools::CRAN_check_results(). El badge muestra el peor resultado.
 
 con_descargas <- c("lupa", "bigbang", "geouy")
 con_posicion <- c("bigbang", "lupa")
+en_cran <- c("bigbang", "lupa")
 cran <- "https://cloud.r-project.org"
 salida <- commandArgs(TRUE)[1]
 if (is.na(salida)) salida <- "badges"
@@ -72,10 +77,16 @@ abreviar <- function(n, idioma) {
 }
 
 textos <- list(
-  es = list(descargas = "descargas", por_mes = "/mes",
+  es = list(descargas = "descargas", en_total = "en total", por_mes = "/mes",
+            chequeos = "chequeos de CRAN",
+            todo_ok = function(n) sprintf("OK en %d plataformas", n),
+            peor = function(s, k, n) sprintf("%s en %d de %d", s, k, n),
             debuts = function(a) sprintf("debuts de %s en CRAN", a),
             top = function(p) sprintf("top %d %% en descargas del mes", p)),
-  en = list(descargas = "downloads", por_mes = "/month",
+  en = list(descargas = "downloads", en_total = "total", por_mes = "/month",
+            chequeos = "CRAN checks",
+            todo_ok = function(n) sprintf("OK on %d platforms", n),
+            peor = function(s, k, n) sprintf("%s on %d of %d", s, k, n),
             debuts = function(a) sprintf("%s CRAN debuts", a),
             top = function(p) sprintf("top %d%% in monthly downloads", p))
 )
@@ -90,10 +101,31 @@ for (pk in con_descargas) {
   message(sprintf("%s: %d descargas en total, %d en el último mes", pk, n_total, n_mes))
   for (idioma in names(textos)) {
     tx <- textos[[idioma]]
-    escribir(sprintf("%s-total.%s.json", pk, idioma), tx$descargas,
-             abreviar(n_total, idioma), azul)
-    escribir(sprintf("%s-mes.%s.json", pk, idioma), tx$descargas,
-             paste0(abreviar(n_mes, idioma), tx$por_mes), azul)
+    escribir(sprintf("%s-descargas.%s.json", pk, idioma), tx$descargas,
+             sprintf("%s %s · %s%s", abreviar(n_total, idioma), tx$en_total,
+                     abreviar(n_mes, idioma), tx$por_mes), azul)
+  }
+}
+writeLines(as.character(max(as.Date(mes$end))), file.path(salida, "ultimo-dia.txt"))
+
+## Chequeos de CRAN --------------------------------------------------------
+
+niveles <- c("OK", "NOTE", "WARNING", "ERROR", "FAILURE")
+colores <- c(OK = "4c1", NOTE = "dfb317", WARNING = "fe7d37", ERROR = "e05d44",
+             FAILURE = "e05d44")
+chequeos <- tools::CRAN_check_results()
+for (pk in en_cran) {
+  estado <- factor(chequeos$Status[chequeos$Package == pk], levels = niveles)
+  n <- length(estado)
+  if (n == 0) next
+  peor <- niveles[max(as.integer(estado))]
+  k <- sum(estado == peor)
+  message(sprintf("%s: %s en %d de %d plataformas de CRAN", pk, peor, k, n))
+  for (idioma in names(textos)) {
+    tx <- textos[[idioma]]
+    escribir(sprintf("%s-chequeos.%s.json", pk, idioma), tx$chequeos,
+             if (peor == "OK") tx$todo_ok(n) else tx$peor(peor, k, n),
+             colores[[peor]])
   }
 }
 
