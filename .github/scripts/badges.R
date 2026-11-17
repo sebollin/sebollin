@@ -5,6 +5,7 @@
 # la carpeta que recibe como argumento (en el workflow, la rama `badges`):
 #
 #   <paquete>-descargas.<idioma>.json  descargas en total y de los últimos 30 días
+#                                      (éstas, sólo si está en CRAN)
 #   <paquete>-posicion.<idioma>.json   posición entre los debuts de su año
 #   <paquete>-chequeos.<idioma>.json   resultado de los chequeos de CRAN
 #   ultimo-dia.txt                     último día que publicó cranlogs
@@ -101,9 +102,12 @@ for (pk in con_descargas) {
   message(sprintf("%s: %d descargas en total, %d en el último mes", pk, n_total, n_mes))
   for (idioma in names(textos)) {
     tx <- textos[[idioma]]
-    escribir(sprintf("%s-descargas.%s.json", pk, idioma), tx$descargas,
-             sprintf("%s %s · %s%s", abreviar(n_total, idioma), tx$en_total,
-                     abreviar(n_mes, idioma), tx$por_mes), azul)
+    # Las del mes, sólo si está en CRAN: archivado, las que quedan son de bots.
+    mensaje <- paste(abreviar(n_total, idioma), tx$en_total)
+    if (pk %in% en_cran) {
+      mensaje <- paste0(mensaje, " · ", abreviar(n_mes, idioma), tx$por_mes)
+    }
+    escribir(sprintf("%s-descargas.%s.json", pk, idioma), tx$descargas, mensaje, azul)
   }
 }
 writeLines(as.character(max(as.Date(mes$end))), file.path(salida, "ultimo-dia.txt"))

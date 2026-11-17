@@ -24,8 +24,7 @@
 Empecé adentro de un aula en **2008** y hoy trabajo adentro de los datos —los
 de las transferencias que decide el Estado, los de las compras de una
 universidad, y los de cualquier problema que se deje modelar—. La pregunta es
-siempre la misma: qué dice este dato, y qué no puede decir. Del aula no me fui
-del todo: sigo coordinando talleres en un liceo público.
+siempre la misma: qué dice este dato, y qué no puede decir.
 
 - 🏛️ **Analista de datos** en la **Dirección Nacional de Transferencias y Análisis de Datos ([DINTAD](https://www.gub.uy/ministerio-desarrollo-social/))** del **MIDES**, como consultor de **[UNFPA](https://uruguay.unfpa.org/)**: gestión y análisis de los programas de transferencias monetarias a hogares en situación de vulnerabilidad socioeconómica.
 - 📊 **Analista de datos** en el **[SeCIU](https://www.seciu.edu.uy/)** de la Universidad de la República: tableros institucionales en **R** y **Shiny**.
@@ -68,10 +67,11 @@ install.packages("lupa")
 ```
 
 [![CRAN](https://www.r-pkg.org/badges/version/lupa)](https://cran.r-project.org/package=lupa)
-[![Descargas](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Flupa-total.es.json)](https://cran.r-project.org/package=lupa)
-[![Descargas del último mes](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Flupa-mes.es.json)](https://cran.r-project.org/package=lupa)
+[![Descargas en total y del último mes](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Flupa-descargas.es.json)](https://cran.r-project.org/package=lupa)
 [![Dependencias](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Ftinyverse.netlify.app%2Fbadge%2Flupa&query=substring-after%28%2F%2F%2A%5Blocal-name%28%29%3D%27title%27%5D%2C%27%3A%20%27%29&label=dependencias&color=67ac09)](https://cran.r-project.org/package=lupa)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/lupa/actions/workflows/R-CMD-check.yaml)
+[![Chequeos de CRAN](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Flupa-chequeos.es.json)](https://cran.r-project.org/web/checks/check_results_lupa.html)
+[![Cobertura](https://img.shields.io/codecov/c/github/sebollin/lupa?label=cobertura)](https://app.codecov.io/gh/sebollin/lupa)
 [![Motores SQL](https://img.shields.io/github/actions/workflow/status/sebollin/lupa/motores.yaml?branch=main&label=motores%20SQL)](https://github.com/sebollin/lupa/actions/workflows/motores.yaml)
 [![Estado](https://img.shields.io/badge/estado-activo-4c1)](https://www.repostatus.org/#active)
 [![Sitio](https://img.shields.io/badge/documentaci%C3%B3n-sebollin.github.io%2Flupa-0e7c7b)](https://sebollin.github.io/lupa/)
@@ -94,11 +94,11 @@ install.packages("bigbang")
 ```
 
 [![CRAN](https://www.r-pkg.org/badges/version/bigbang)](https://cran.r-project.org/package=bigbang)
-[![Descargas](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fbigbang-total.es.json)](https://cran.r-project.org/package=bigbang)
-[![Descargas del último mes](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fbigbang-mes.es.json)](https://cran.r-project.org/package=bigbang)
+[![Descargas en total y del último mes](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fbigbang-descargas.es.json)](https://cran.r-project.org/package=bigbang)
 [![Posición entre los debuts de 2026 en CRAN](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fbigbang-posicion.es.json)](https://github.com/sebollin/sebollin/blob/main/.github/scripts/badges.R)
 [![Dependencias](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Ftinyverse.netlify.app%2Fbadge%2Fbigbang&query=substring-after%28%2F%2F%2A%5Blocal-name%28%29%3D%27title%27%5D%2C%27%3A%20%27%29&label=dependencias&color=67ac09)](https://cran.r-project.org/package=bigbang)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/sebollin/bigbang/R-CMD-check.yaml?branch=main&label=R%20CMD%20check)](https://github.com/sebollin/bigbang/actions/workflows/R-CMD-check.yaml)
+[![Chequeos de CRAN](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fbigbang-chequeos.es.json)](https://cran.r-project.org/web/checks/check_results_bigbang.html)
 [![Cobertura](https://img.shields.io/codecov/c/github/sebollin/bigbang?label=cobertura)](https://app.codecov.io/gh/sebollin/bigbang)
 [![Estado](https://img.shields.io/badge/estado-activo-4c1)](https://www.repostatus.org/#active)
 [![Sitio](https://img.shields.io/badge/documentaci%C3%B3n-sebollin.github.io%2Fbigbang-0e7c7b)](https://sebollin.github.io/bigbang/)
@@ -121,7 +121,7 @@ pak::pak("Richard-Detomasi/geouy")
 ```
 
 [![CRAN](https://img.shields.io/badge/CRAN-0.3.0%20en%20revisi%C3%B3n-f2b705)](https://cran.r-project.org/package=geouy)
-[![Descargas](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fgeouy-total.es.json)](https://cran.r-project.org/package=geouy)
+[![Descargas en total](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsebollin%2Fsebollin%2Fbadges%2Fgeouy-descargas.es.json)](https://cran.r-project.org/package=geouy)
 [![R CMD check](https://img.shields.io/github/actions/workflow/status/Richard-Detomasi/geouy/R-CMD-check.yaml?branch=master&label=R%20CMD%20check)](https://github.com/Richard-Detomasi/geouy/actions/workflows/R-CMD-check.yaml)
 [![Cobertura](https://img.shields.io/codecov/c/github/Richard-Detomasi/geouy/master?label=cobertura)](https://app.codecov.io/gh/Richard-Detomasi/geouy?branch=master)
 [![Estado](https://img.shields.io/badge/estado-activo-4c1)](https://www.repostatus.org/#active)
@@ -143,6 +143,7 @@ de Estación R, y los hexágonos de `bigbang` y `geouy`, en la [galería de hexS
 - 📊 **Monitor de compras de la UdelaR** *(SeCIU)* — cerca de **100.000 compras** en un tablero de [Shiny](https://shiny.posit.co/) con múltiples visualizaciones y filtros cruzados, CSS propio incluido.
 - 🏛️ **[tus-ipm-microsimulacion](https://github.com/sebollin/tus-ipm-microsimulacion)** — microsimulación del efecto de aumentos de la Tarjeta Uruguay Social sobre la **pobreza multidimensional** (ECH 2025): resultados agregados, figuras reproducibles y la arquitectura metodológica.
 - 🧰 **[lupa](https://github.com/sebollin/lupa)** y **[bigbang](https://github.com/sebollin/bigbang)** — los dos paquetes míos de acá arriba; los escribí porque me hacían falta y no existían.
+- 📍 **[geouy](https://github.com/Richard-Detomasi/geouy)** — el paquete de [Richard Detomasi](https://github.com/Richard-Detomasi), del que soy coautor. Mi parte para que vuelva a CRAN: recuperar las capas que los organismos habían mudado de servidor, que una descarga fallida no tire abajo la sesión de R, un chequeo semanal que abre un issue cuando una capa deja de responder, los tests y la cobertura en el CI, y el reenvío a CRAN.
 - 🗺️ **CARTOGRAFÍA URGENTE** — relevamiento y análisis de la distribución geográfica de las propuestas educativas de Montevideo para niñas, niños y adolescentes.
 
 Y fuera del horario: optimización y modelos de pronóstico para problemas que no
