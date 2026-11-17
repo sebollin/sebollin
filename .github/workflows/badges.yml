@@ -6,6 +6,8 @@
 # Corre cada hora, pero cranlogs publica un día por vez: la primera consulta,
 # liviana, sólo pregunta si ya está el día nuevo. El cálculo completo, que
 # consulta las descargas de miles de paquetes, se hace una vez por día publicado.
+# Lo mismo vale si lo dispara algo de afuera (workflow_dispatch); para forzar el
+# cálculo a mano, marcar «forzar» al lanzarlo.
 
 name: badges
 
@@ -13,6 +15,11 @@ on:
   schedule:
     - cron: "23 * * * *"
   workflow_dispatch:
+    inputs:
+      forzar:
+        description: Calcular aunque cranlogs no haya publicado un día nuevo
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -37,8 +44,8 @@ jobs:
             https://cranlogs.r-pkg.org/downloads/total/last-day/bigbang \
             | jq -r '.[0].end' || true)
           previo=$(cat rama-badges/ultimo-dia.txt 2>/dev/null || true)
-          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
-            echo "Corrida manual: se calcula igual."
+          if [ "${{ inputs.forzar }}" = "true" ]; then
+            echo "Corrida forzada: se calcula igual."
             echo "nuevo=true" >> "$GITHUB_OUTPUT"
           elif [ -z "$dia" ] || [ "$dia" = "null" ]; then
             echo "cranlogs no respondió; se prueba en la próxima hora."
