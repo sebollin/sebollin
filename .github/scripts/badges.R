@@ -1,12 +1,13 @@
 # Cifras de los badges de paquetes del perfil, en español y en inglés.
 #
 # Lo ejecuta .github/workflows/badges.yml cada vez que cranlogs publica un día
-# nuevo. Escribe un JSON por badge, con el formato «endpoint» de shields.io, en
-# la carpeta que recibe como argumento (en el workflow, la rama `badges`):
+# nuevo. Escribe en la carpeta que recibe como argumento (en el workflow, la
+# rama `badges`) un JSON por badge, con el formato «endpoint» de shields.io, o
+# un SVG cuando el badge tiene que poder desaparecer:
 #
 #   <paquete>-descargas.<idioma>.json  descargas en total y de los últimos 30 días
 #                                      (éstas, sólo si está en CRAN)
-#   <paquete>-posicion.<idioma>.json   posición entre los debuts de su año
+#   <paquete>-posicion.<idioma>.svg    posición entre los debuts de su año
 #   <paquete>-chequeos.<idioma>.json   resultado de los chequeos de CRAN
 #   ultimo-dia.txt                     último día que publicó cranlogs
 #
@@ -19,12 +20,19 @@
 #      el archivo de versiones viejas (src/contrib/Meta/archive.rds) y la
 #      publicación de la versión actual.
 #   2. La cohorte son los paquetes que están hoy en CRAN y debutaron el mismo
-#      año calendario, con al menos 30 días en CRAN al cierre de la ventana.
-#   3. Se comparan las descargas de los últimos 30 días, la misma cifra del
-#      badge de descargas del mes.
+#      año calendario.
+#   3. Con 30 días o más en CRAN, se comparan las descargas de los últimos 30
+#      días (la cifra del badge de descargas del mes) entre los de la cohorte
+#      que también tienen 30 días o más.
+#      Con menos de 30 días, se compara el arranque: las descargas de los
+#      primeros N días de cada paquete, cada uno desde su propio debut, entre
+#      los de la cohorte que ya tienen N días. Así un paquete nuevo no compite
+#      con meses de descargas ajenas. Al día 30 las dos cuentas coinciden.
 #   4. El puesto es 1 + la cantidad de paquetes de la cohorte con más
 #      descargas, y el porcentaje se redondea hacia arriba (top 8,5 % → 9 %).
-#   Un paquete con menos de 30 días en CRAN queda afuera hasta cumplirlos.
+#   5. El badge se ve sólo en el top 25 % (verde hasta el 10 %, azul hasta el
+#      25 %). Fuera de eso, o con menos de 7 días en CRAN, el SVG queda vacío y
+#      el badge no aparece en el perfil.
 #
 # Chequeos de CRAN: los que CRAN corre en sus propias máquinas (13 plataformas),
 # de tools::CRAN_check_results(). El badge muestra el peor resultado.
@@ -83,13 +91,19 @@ textos <- list(
             todo_ok = function(n) sprintf("OK en %d plataformas", n),
             peor = function(s, k, n) sprintf("%s en %d de %d", s, k, n),
             debuts = function(a) sprintf("debuts de %s en CRAN", a),
-            top = function(p) sprintf("top %d %% en descargas del mes", p)),
+            top = function(p) sprintf("top %d %% en descargas del mes", p),
+            top_arranque = function(p, n) {
+              sprintf("top %d %% en descargas de sus primeros %d días", p, n)
+            }),
   en = list(descargas = "downloads", en_total = "total", por_mes = "/month",
             chequeos = "CRAN checks",
             todo_ok = function(n) sprintf("OK on %d platforms", n),
             peor = function(s, k, n) sprintf("%s on %d of %d", s, k, n),
             debuts = function(a) sprintf("%s CRAN debuts", a),
-            top = function(p) sprintf("top %d%% in monthly downloads", p))
+            top = function(p) sprintf("top %d%% in monthly downloads", p),
+            top_arranque = function(p, n) {
+              sprintf("top %d%% in downloads in its first %d days", p, n)
+            })
 )
 
 ## Descargas totales y del mes -------------------------------------------
@@ -147,24 +161,65 @@ debut <- setNames(as.Date(substr(db$Published, 1, 10)), db$Package)
 con_archivo <- intersect(names(primera_archivada), names(debut))
 debut[con_archivo] <- pmin(debut[con_archivo], primera_archivada[con_archivo], na.rm = TRUE)
 
+umbral <- 25    # el badge se ve sólo en el top 25 %
+dias_min <- 7   # antes de una semana en CRAN, las cifras son puro ruido
+cierre <- as.Date(max(mes$end))
+
+## El badge como SVG de shields.io, guardado en la rama, para poder vaciarlo.
+svg_badge <- function(archivo, etiqueta, mensaje, color) {
+  u <- sprintf("https://img.shields.io/static/v1?label=%s&message=%s&color=%s",
+               URLencode(etiqueta, TRUE), URLencode(mensaje, TRUE), color)
+  svg <- NULL
+  for (intento in 1:5) {
+    svg <- tryCatch(readLines(u, warn = FALSE, encoding = "UTF-8"),
+                    error = function(e) NULL)
+    if (length(svg) && grepl("<svg", svg[1], fixed = TRUE)) break
+    svg <- NULL
+    Sys.sleep(5 * intento)
+  }
+  if (is.null(svg)) stop("shields.io no respondió: ", u)
+  writeLines(svg, file.path(salida, archivo), useBytes = TRUE)
+}
+svg_invisible <- function(archivo) {
+  writeLines('<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"/>',
+             file.path(salida, archivo))
+}
+
 for (pk in con_posicion) {
-  if (is.na(debut[pk])) next
-  anio <- format(debut[pk], "%Y")
-  d <- descargas(names(debut)[which(format(debut, "%Y") == anio)], "last-month")
-  cierre <- as.Date(max(d$end))
-  cohorte <- d[debut[d$package] <= cierre - 29, ]
-  if (!(pk %in% cohorte$package)) {
-    message(pk, ": todavía no cumple 30 días en CRAN")
+  archivos <- sprintf("%s-posicion.%s.svg", pk, names(textos))
+  dias <- as.integer(cierre - debut[pk]) + 1
+  if (is.na(dias) || dias < dias_min) {
+    message(pk, ": menos de ", dias_min, " días en CRAN, badge invisible")
+    for (a in archivos) svg_invisible(a)
     next
+  }
+  anio <- format(debut[pk], "%Y")
+  del_anio <- debut[which(format(debut, "%Y") == anio)]
+  if (dias >= 30) {
+    d <- descargas(names(del_anio), "last-month")
+    cohorte <- d[del_anio[d$package] <= cierre - 29, ]
+    que <- "en el último mes"
+  } else {
+    ya_tienen <- del_anio[del_anio <= cierre - dias + 1]
+    por_debut <- split(names(ya_tienen), format(ya_tienen))
+    cohorte <- do.call(rbind, lapply(names(por_debut), function(f) {
+      descargas(por_debut[[f]], sprintf("%s:%s", f, as.Date(f) + dias - 1))
+    }))
+    que <- sprintf("en sus primeros %d días", dias)
   }
   propias <- cohorte$downloads[cohorte$package == pk]
   puesto <- 1 + sum(cohorte$downloads > propias)
   pct <- ceiling(100 * puesto / nrow(cohorte))
-  message(sprintf("%s: puesto %d de %d debuts de %s (top %d %%), %d descargas al %s",
-                  pk, puesto, nrow(cohorte), anio, pct, propias, cierre))
-  color <- if (pct <= 10) "2e7d32" else if (pct <= 25) "198CE7" else "6e7781"
-  for (idioma in names(textos)) {
-    tx <- textos[[idioma]]
-    escribir(sprintf("%s-posicion.%s.json", pk, idioma), tx$debuts(anio), tx$top(pct), color)
+  message(sprintf("%s: puesto %d de %d debuts de %s (top %d %%), %d descargas %s, al %s",
+                  pk, puesto, nrow(cohorte), anio, pct, propias, que, cierre))
+  for (i in seq_along(textos)) {
+    tx <- textos[[i]]
+    if (pct > umbral) {
+      svg_invisible(archivos[i])
+      next
+    }
+    mensaje <- if (dias >= 30) tx$top(pct) else tx$top_arranque(pct, dias)
+    svg_badge(archivos[i], tx$debuts(anio), mensaje,
+              if (pct <= 10) "2e7d32" else "198CE7")
   }
 }
