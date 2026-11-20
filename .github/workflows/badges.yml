@@ -32,7 +32,7 @@ jobs:
   badges:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: badges
           path: rama-badges
@@ -58,7 +58,7 @@ jobs:
             echo "nuevo=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         if: steps.chequeo.outputs.nuevo == 'true'
         with:
           path: principal
